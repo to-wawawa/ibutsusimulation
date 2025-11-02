@@ -10,7 +10,7 @@
   --warn: #ff9b9b;
 
   /* スロットの縦横比（幅に応じて高さが決まる） */
-  --slot-aspect: 5 / 2.6;
+  --slot-aspect: 5 / 3;
 }
 
 * { box-sizing: border-box; }
@@ -300,6 +300,7 @@ button:hover { border-color: var(--accent); }
   padding-top: 6px;
   padding-bottom: 6px;
 }
+
 
 
 
