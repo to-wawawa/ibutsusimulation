@@ -1,96 +1,86 @@
 // calculator.js
 //
-// 各スロットに選択された効果(effectId)とレベル(level=0~4)を基に
-// 最終的な atk / hp / sta / fp などの値を算出する。
+// スロット情報とeffects.jsonを用いて最終ステータスを算出する
+// ui.js が呼び出すグローバル関数 window.calculate(base, slots, effectsDict) を提供する
 
-import { getState } from "./state.js";
+(function () {
+  /**
+   * 効果データからレベルに応じた値を取得
+   * - effects.json 側で valuesByLevel または levels のいずれかを使用可
+   */
+  function calcEffectValue(effect, level) {
+    if (!effect) return 0;
+    const arr = effect.valuesByLevel || effect.levels || [];
+    if (!Array.isArray(arr) || !arr.length) return 0;
 
-/**
- * 効果IDから該当の効果データを取得
- */
-export function getEffectById(effects, id) {
-  return effects.find(e => e.id === id) || null;
-}
-
-/**
- * 指定された効果とレベルから、実際の値を算出
- * - effect.levels に 0~4 の値が格納されている
- */
-export function calcEffectValue(effect, level) {
-  if (!effect || !Array.isArray(effect.levels)) return 0;
-  const idx = Math.max(0, Math.min(level, effect.levels.length - 1));
-  return effect.levels[idx] || 0;
-}
-
-/**
- * メイン計算関数
- * - state.slots には [{ effectId: "atk_magic_pct", level: 4 }, ...] が入っている想定
- * - effects.json を参照して各効果値を加算・乗算
- */
-export function calculateAll(effects) {
-  const state = getState();
-
-  // 基礎値
-  const baseAtk = Number(state.base.atk) || 1.0;
-  const baseHp = Number(state.base.hp) || 1000;
-  const baseSta = Number(state.base.sta) || 100;
-  const baseFp = Number(state.base.fp) || 100;
-
-  // 結果を初期化
-  let atkMul = 1.0;   // 乗算系
-  let atkAdd = 0.0;   // 加算系(%)
-  let hpAdd = 0.0;    // 固定加算
-  let staAdd = 0.0;
-  let fpAdd = 0.0;
-
-  // 各スロットを処理
-  for (const slot of state.slots) {
-    if (!slot || !slot.effectId) continue;
-    const effect = getEffectById(effects, slot.effectId);
-    if (!effect) continue;
-
-    const val = calcEffectValue(effect, slot.level ?? 0);
-    const mode = effect.stackMode;
-    const target = effect.target;
-
-    // ------------------------------
-    // 効果タイプ別の処理
-    // ------------------------------
-    if (target === "atk") {
-      if (mode === "multiplicativePercent") {
-        atkMul *= 1 + val; // 例：+0.12 → 1.12倍
-      } else if (mode === "additivePercent") {
-        atkAdd += val;     // 例：+0.12 → 加算
-      }
-    }
-    else if (target === "hp") {
-      if (mode === "additiveFlat") {
-        hpAdd += val;      // 固定値加算
-      } else if (mode === "additivePercent") {
-        hpAdd += baseHp * val;
-      }
-    }
-    else if (target === "sta") {
-      if (mode === "additiveFlat") staAdd += val;
-    }
-    else if (target === "fp") {
-      if (mode === "additiveFlat") fpAdd += val;
-      else if (mode === "multiplicativePercent") fpAdd += baseFp * val;
-    }
+    const idx = Math.max(0, Math.min(level || 0, arr.length - 1));
+    const val = Number(arr[idx]);
+    return Number.isFinite(val) ? val : 0;
   }
 
-  // ------------------------------
-  // 最終値算出
-  // ------------------------------
-  const finalAtk = baseAtk * atkMul + atkAdd;
-  const finalHp = baseHp + hpAdd;
-  const finalSta = baseSta + staAdd;
-  const finalFp = baseFp + fpAdd;
+  /**
+   * メイン計算関数
+   * @param {object} base - { atk, hp, stamina, fp } 基礎値
+   * @param {Array} slots - [{ effectId, level, value }]
+   * @param {object} effectsDict - idをキーとした効果辞書
+   */
+  function calculate(base, slots, effectsDict) {
+    let atkMul = 1.0;
+    let atkAdd = 0;
+    let hpAdd = 0;
+    let staAdd = 0;
+    let fpAdd = 0;
 
-  return {
-    atk: finalAtk,
-    hp: finalHp,
-    sta: finalSta,
-    fp: finalFp
-  };
-}
+    for (const s of slots) {
+      if (!s || !s.effectId) continue;
+      const eff = effectsDict[s.effectId];
+      if (!eff) continue;
+
+      const val = calcEffectValue(eff, s.level ?? 0);
+      const target = (eff.target || "").toLowerCase();
+      const mode = eff.stackMode || "additiveFlat";
+
+      switch (target) {
+        case "atk":
+          if (mode === "multiplicativePercent") {
+            atkMul *= 1 + val;
+          } else if (mode === "additivePercent") {
+            atkAdd += val;
+          } else if (mode === "additiveFlat") {
+            atkAdd += val;
+          }
+          break;
+
+        case "hp":
+          if (mode === "additiveFlat") hpAdd += val;
+          else if (mode === "additivePercent") hpAdd += base.hp * val;
+          break;
+
+        case "stamina":
+          if (mode === "additiveFlat") staAdd += val;
+          else if (mode === "additivePercent") staAdd += base.stamina * val;
+          break;
+
+        case "fp":
+          if (mode === "additiveFlat") fpAdd += val;
+          else if (mode === "additivePercent") fpAdd += base.fp * val;
+          break;
+
+        default:
+          // "other"や不明targetは無視（将来拡張用）
+          break;
+      }
+    }
+
+    // 計算結果を返す
+    return {
+      atkMultiplier: atkMul + atkAdd, // 加算と乗算を合わせて扱う
+      hp: Math.round(base.hp + hpAdd),
+      stamina: Math.round(base.stamina + staAdd),
+      fp: Math.round(base.fp + fpAdd),
+    };
+  }
+
+  // グローバル公開（ui.js から呼び出される）
+  window.calculate = calculate;
+})();
