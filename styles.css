@@ -52,12 +52,38 @@ button:hover { border-color: var(--accent); }
   padding: 12px;
 }
 
+/* タブ */
+.tabs {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin: 6px 0 8px;
+}
+.tab-btn {
+  padding: 6px 10px;
+  border: 1px solid var(--border);
+  background: var(--panel-2);
+  color: var(--text);
+  border-radius: 999px;
+  cursor: pointer;
+  font-size: 12px;
+  line-height: 1;
+}
+.tab-btn.active {
+  border-color: var(--accent);
+  background: rgba(110, 168, 254, 0.12);
+}
+.tab-btn:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
 .effect-list {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
-  gap: 10px;
+  gap: 8px;
   margin-top: 8px;
-  max-height: 700px;
+  max-height: 420px;
   overflow: auto;
 }
 .effect-pill {
@@ -73,7 +99,7 @@ button:hover { border-color: var(--accent); }
 .effect-pill .name { font-weight: 600; }
 .effect-pill .target { color: var(--muted); font-size: 12px; }
 
-/* 3列×6行を固定（18スロット） */
+/* 3列×6行固定（18スロット） */
 .slots {
   overflow: auto; /* 画面が狭い時はスクロールで逃がす */
 }
@@ -173,39 +199,53 @@ button:hover { border-color: var(--accent); }
   .workspace { grid-template-columns: 1fr; }
 }
 
-.effect-tabs {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 6px;
-  margin: 8px 0;
-}
 
-.tab-btn {
-  background: var(--panel-2);
-  color: var(--text);
-  border: 1px solid var(--border);
-  border-radius: 999px;
-  padding: 6px 12px;
-  cursor: pointer;
-  font-size: 13px;
-  transition: 0.2s;
-}
+/* スマホ最適化（縦長） */
+@media (max-width: 700px) {
+  .workspace { grid-template-columns: 1fr; }
 
-.tab-btn:hover {
-  border-color: var(--accent);
-  color: var(--accent);
-}
+  /* スロットは1列に（縦スクロールで確実にタップできる） */
+  .slot-grid { grid-template-columns: 1fr; }
 
-.tab-btn.active {
-  background: var(--accent);
-  color: white;
-  border-color: var(--accent);
-}
-@media (max-width: 900px) {
-  .workspace {
-    grid-template-columns: 1fr; /* 縦並びに */
+  /* パレットのタブと検索を固定（上部でいつでも操作しやすい） */
+  .palette {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    /* 背景と境界を再確認（重なり時に視認性を維持） */
+    background: var(--panel);
+    border: 1px solid var(--border);
   }
-  .slots {
-    max-width: none;
+
+  /* タブとピルのタッチターゲットを拡大 */
+  .tab-btn {
+    padding: 10px 14px;
+    font-size: 14px;
   }
+  .effect-pill {
+    padding: 12px 14px;
+  }
+
+  /* スロットの高さ（aspect-ratio）を少し高めてタップしやすく */
+  .slot {
+    aspect-ratio: 9 / 7;
+  }
+
+  /* 検索欄の高さ・余白も広げる */
+  input[type="search"] {
+    padding: 12px 14px;
+    font-size: 16px;
+  }
+
+  /* スクロールの慣性を有効化（モバイル操作向け） */
+  .effect-list, .slots {
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+/* タブ・検索周辺がstickyでも視認しやすいように微調整 */
+.tabs {
+  background: var(--panel);
+  padding-top: 6px;
+  padding-bottom: 6px;
 }
