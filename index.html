@@ -9,7 +9,7 @@
 <body>
   <header>
     <h1>遺物効果シミュレーター</h1>
-    <p>18スロットに効果ジャンルをD&D → レベルを選択/値入力 → 最終値を算出</p>
+    <p>18スロットに効果ジャンルをD&D → レベルや値を入力 → 最終値を算出</p>
   </header>
 
   <section class="inputs">
@@ -34,6 +34,7 @@
   <section class="workspace">
     <div class="palette">
       <h2>効果ジャンル（ドラッグしてスロットにドロップ）</h2>
+      <div id="palette-tabs" class="tabs" role="tablist" aria-label="効果ジャンル"></div>
       <input id="palette-search" type="search" placeholder="検索..." />
       <div id="effect-list" class="effect-list"></div>
     </div>
@@ -56,11 +57,17 @@
 
   <footer>
     <small>
-      効果式・係数は `effects.json`（優先）または `data.js`（フォールバック）で編集可能。<br>
-      出典: <a href="https://kamikouryaku.net/nightreign_eldenring/?%E9%81%BA%E7%89%A9%E5%8A%B9%E6%9E%9C" target="_blank" rel="noopener">神攻略wiki Night Reign 遺物効果</a>（引用は必要最小限）
+      効果式・係数は <code>effects.json</code>（サーバ時）または <code>data.js</code>（file直開き時）で編集可能。<br>
+      出典: <a href="https://kamikouryaku.net/nightreign_eldenring/?%E9%81%BA%E7%89%A9%E5%8A%B9%E6%9E%9C" target="_blank" rel="noopener">
+      神攻略wiki Night Reign 遺物効果</a>（引用は必要最小限）
     </small>
   </footer>
 
-  <script type="module" src="./main.js"></script>
-</body>
+  <!-- 読み込み順が重要 -->
+    <script src="./main.js" defer></script>
+    <script src="./state.js" defer></script>
+    <script src="./calculator.js" defer></script>
+    <script src="./data.js" defer></script>
+    <script src="./ui.js" defer></script>
+  </body>
 </html>
