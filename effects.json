@@ -81,20 +81,15 @@
     "target": "atk",
     "stackMode": "multiplicativePercent",
     "valueUnit": "%",
-    "default": 4,
-    "cap": 10,
-    "note": "+0~2: 3/4/5%。深層+0~4: 3/4/5/8/10%（目安）。魔術・祈祷にも効果（武器表示に反映されない）"
+    "valuesByLevel": [0.04, 0.05, 0.06, 0.10, 0.12]
   },
   {
     "id": "atk_magic_pct",
     "name": "魔力攻撃力上昇（%）",
     "target": "atk",
     "stackMode": "multiplicativePercent",
-    "valueUnit": "%",
-    "values": [0, 1, 2, 3, 4], 
-    "default": 0,
-    "cap": 1.12,
-    "note": "通常: 4/5/6%。深層: 4/5/6/10/12%。魔術・祈祷にも効果（武器表示に反映されない）"
+    "valueUnit":"%",
+    "valuesByLevel": [0.04, 0.05, 0.06, 0.10, 0.12]
   },
   {
     "id": "atk_fire_pct",
@@ -102,9 +97,7 @@
     "target": "atk",
     "stackMode": "multiplicativePercent",
     "valueUnit": "%",
-    "default": 5,
-    "cap": 12,
-    "note": "通常: +?（不明時は入力）。深層例: 4/5/6/10/12%"
+    "valuesByLevel": [0.04, 0.05, 0.06, 0.10, 0.12]
   },
   {
     "id": "atk_lightning_pct",
@@ -112,9 +105,7 @@
     "target": "atk",
     "stackMode": "multiplicativePercent",
     "valueUnit": "%",
-    "default": 5,
-    "cap": 12,
-    "note": "通常: +?。深層例: 4/5/6/10/12%"
+    "valuesByLevel": [0.04, 0.05, 0.06, 0.10, 0.12]
   },
   {
     "id": "atk_holy_pct",
@@ -122,20 +113,15 @@
     "target": "atk",
     "stackMode": "multiplicativePercent",
     "valueUnit": "%",
-    "default": 5,
-    "cap": 12,
-    "note": "通常: +?。深層例: 4/5/6/10/12%"
+    "valuesByLevel": [0.04, 0.05, 0.06, 0.10, 0.12]
   },
-
   {
     "id": "atk_first_normal_hit",
     "name": "通常攻撃の1段目強化",
     "target": "atk",
     "stackMode": "multiplicativePercent",
     "valueUnit": "%",
-    "default": 13,
-    "cap": 13,
-    "condition": "normal_first_hit_only",
+    "valuesByLevel": [0.13],
     "note": "約1.13倍。1段目のみ適用（1段しかない攻撃は対象外）"
   },
   {
@@ -144,10 +130,7 @@
     "target": "atk",
     "stackMode": "multiplicativePercent",
     "valueUnit": "%",
-    "default": 15,
-    "cap": 15,
-    "condition": "critical_only",
-    "uniqueGroup": "crit_boost",
+    "valuesByLevel": [0.15],
     "note": "約1.15倍。『致命の一撃強化+1』と重複不可（どちらか高い方1つ）"
   },
   {
@@ -156,10 +139,7 @@
     "target": "atk",
     "stackMode": "multiplicativePercent",
     "valueUnit": "%",
-    "default": 20,
-    "cap": 20,
-    "condition": "critical_only",
-    "uniqueGroup": "crit_boost",
+    "valuesByLevel": [0.20],
     "note": "約1.20倍（同グループ内は最大1件まで）"
   },
   {
@@ -168,9 +148,7 @@
     "target": "atk",
     "stackMode": "multiplicativePercent",
     "valueUnit": "%",
-    "default": 15,
-    "cap": 15,
-    "condition": "roar_or_breath",
+    "valuesByLevel": [0.15],
     "note": "約1.15倍（対象カテゴリのみ）"
   },
 
@@ -180,11 +158,7 @@
     "target": "atk",
     "stackMode": "multiplicativePercent",
     "valueUnit": "%",
-    "default": 10,
-    "cap": 10,
-    "durationSec": 10,
-    "stackable": false,
-    "condition": "on_weapon_swap",
+    "valuesByLevel": [0.10],
     "note": "約1.1倍、10秒。『妖刀』は持ち替え扱いに含まれない"
   },
   {
@@ -193,9 +167,7 @@
     "target": "atk",
     "stackMode": "multiplicativePercent",
     "valueUnit": "%",
-    "default": 10,
-    "cap": 10,
-    "condition": "element_damage_only",
+    "valuesByLevel": [0.10],
     "note": "武器・エンチャ・戦技・道具・アーツ経由の属性与ダメが約1.1倍（エンチャ以外の魔術/祈祷は対象外）"
   },
   {
@@ -204,11 +176,7 @@
     "target": "atk",
     "stackMode": "multiplicativePercent",
     "valueUnit": "%",
-    "default": 15,
-    "cap": 15,
-    "durationSec": 10,
-    "stackable": false,
-    "condition": "on_damage_taken",
+    "valuesByLevel": [0.15],
     "note": "約1.15倍、10秒。自傷や0以下被ダメは無効"
   },
 
@@ -218,10 +186,7 @@
     "target": "atk",
     "stackMode": "multiplicativePercent",
     "valueUnit": "%",
-    "default": 5,
-    "cap": 5,
-    "stackable": true,
-    "persistent": true,
+    "valuesByLevel": [0.05],
     "note": "封牢ごとに約1.05倍、永続。回数分スロットに入れるか合成値を入力"
   },
   {
@@ -230,10 +195,7 @@
     "target": "atk",
     "stackMode": "multiplicativePercent",
     "valueUnit": "%",
-    "default": 7,
-    "cap": 7,
-    "stackable": true,
-    "persistent": true,
+    "valuesByLevel": [0.07],
     "note": "1体につき約1.07倍、永続。回数分スロットに入れるか合成値を入力"
   },
 
@@ -243,9 +205,7 @@
     "target": "atk",
     "stackMode": "multiplicativePercent",
     "valueUnit": "%",
-    "default": 10,
-    "cap": 20,
-    "durationSec": 30,
+    "valuesByLevel": [0.10,0.17,0.20],
     "note": "約1.1倍（+0~2: 10/17/20%）。脂の効果切れと独立して残る"
   },
   {
@@ -254,9 +214,7 @@
     "target": "atk",
     "stackMode": "multiplicativePercent",
     "valueUnit": "%",
-    "default": 15,
-    "cap": 52,
-    "condition": "throwing_pot_only",
+    "valuesByLevel": [0.15,0.32,0.52],
     "note": "1つ約1.15倍、2つ約1.32倍（32%）、3つ約1.52倍（52%）"
   },
   {
@@ -265,9 +223,7 @@
     "target": "atk",
     "stackMode": "multiplicativePercent",
     "valueUnit": "%",
-    "default": 14,
-    "cap": 51,
-    "condition": "throwing_knife_only",
+    "valuesByLevel": [0.14,0.31,0.51],
     "note": "1つ約1.14倍、2つ約1.31倍（31%）、3つ約1.51倍（51%）"
   },
   {
@@ -276,9 +232,7 @@
     "target": "atk",
     "stackMode": "multiplicativePercent",
     "valueUnit": "%",
-    "default": 15,
-    "cap": 52,
-    "condition": "kisei_or_gravity_items_only",
+    "valuesByLevel": [0.15,0.32,0.52],
     "note": "1つ約1.15倍、2つ約1.32倍（32%）、3つ約1.52倍（52%）"
   },
   {
@@ -287,9 +241,7 @@
     "target": "atk",
     "stackMode": "multiplicativePercent",
     "valueUnit": "%",
-    "default": 14,
-    "cap": 51,
-    "condition": "perfume_only",
+    "valuesByLevel": [0.14,0.31,0.51],
     "note": "1つ約1.14倍、2つ約1.31倍（31%）、3つ約1.51倍（51%）"
   },
 
@@ -299,9 +251,7 @@
     "target": "atk",
     "stackMode": "multiplicativePercent",
     "valueUnit": "%",
-    "default": 10,
-    "cap": 10,
-    "condition": "enemy_poisoned",
+    "valuesByLevel": [0.10],
     "note": "約1.1倍（別の状態異常強化と重複可）"
   },
   {
@@ -310,9 +260,7 @@
     "target": "atk",
     "stackMode": "multiplicativePercent",
     "valueUnit": "%",
-    "default": 10,
-    "cap": 10,
-    "condition": "enemy_rot",
+    "valuesByLevel": [0.10],
     "note": "約1.1倍"
   },
   {
@@ -321,9 +269,7 @@
     "target": "atk",
     "stackMode": "multiplicativePercent",
     "valueUnit": "%",
-    "default": 10,
-    "cap": 10,
-    "condition": "enemy_frostbite",
+    "valuesByLevel": [0.10],
     "note": "約1.1倍"
   },
 
@@ -333,9 +279,7 @@
     "target": "hp",
     "stackMode": "multiplicativePercent",
     "valueUnit": "%",
-    "default": 10,
-    "cap": 10,
-    "stackable": true,
+    "valuesByLevel": [0.10],
     "note": "+10%"
   },
   {
@@ -344,9 +288,7 @@
     "target": "fp",
     "stackMode": "multiplicativePercent",
     "valueUnit": "%",
-    "default": 15,
-    "cap": 15,
-    "stackable": true,
+    "valuesByLevel": [0.15],
     "note": "+15%"
   },
   {
@@ -355,21 +297,8 @@
     "target": "stamina",
     "stackMode": "multiplicativePercent",
     "valueUnit": "%",
-    "default": 12,
-    "cap": 12,
-    "stackable": true,
+    "valuesByLevel": [0.12],
     "note": "約1.12倍（+12%）"
-  },
-
-  {
-    "id": "deep_atk_phys_pct",
-    "name": "【深層】物理攻撃力上昇（%）",
-    "target": "atk",
-    "stackMode": "multiplicativePercent",
-    "valueUnit": "%",
-    "default": 8,
-    "cap": 10,
-    "note": "+0~4: 3/4/5/8/10%（+3以上でデメリット有）"
   },
   {
     "id": "deep_atk_element_pct",
@@ -377,49 +306,8 @@
     "target": "atk",
     "stackMode": "multiplicativePercent",
     "valueUnit": "%",
-    "default": 8,
-    "cap": 10,
+    "valuesByLevel": [0.04,0.08,0.10],
     "note": "属性一括: 4/8/10%（+1以上でデメリット有）"
-  },
-  {
-    "id": "deep_atk_magic_pct",
-    "name": "【深層】魔力攻撃力上昇（%）",
-    "target": "atk",
-    "stackMode": "multiplicativePercent",
-    "valueUnit": "%",
-    "default": 8,
-    "cap": 12,
-    "note": "+0~4: 4/5/6/10/12%（+3以上でデメリット有）"
-  },
-  {
-    "id": "deep_atk_fire_pct",
-    "name": "【深層】炎攻撃力上昇（%）",
-    "target": "atk",
-    "stackMode": "multiplicativePercent",
-    "valueUnit": "%",
-    "default": 8,
-    "cap": 12,
-    "note": "+0~4: 4/5/6/10/12%（+3以上でデメリット有）"
-  },
-  {
-    "id": "deep_atk_lightning_pct",
-    "name": "【深層】雷攻撃力上昇（%）",
-    "target": "atk",
-    "stackMode": "multiplicativePercent",
-    "valueUnit": "%",
-    "default": 8,
-    "cap": 12,
-    "note": "+0~4: 4/5/6/10/12%（+3以上でデメリット有）"
-  },
-  {
-    "id": "deep_atk_holy_pct",
-    "name": "【深層】聖攻撃力上昇（%）",
-    "target": "atk",
-    "stackMode": "multiplicativePercent",
-    "valueUnit": "%",
-    "default": 8,
-    "cap": 12,
-    "note": "+0~4: 4/5/6/10/12%（+3以上でデメリット有）"
   },
   {
     "id": "deep_magic_boost_pct",
@@ -427,9 +315,7 @@
     "target": "atk",
     "stackMode": "multiplicativePercent",
     "valueUnit": "%",
-    "default": 8,
-    "cap": 10,
-    "condition": "magic_only",
+    "valuesByLevel": [0.04,0.08,0.10],
     "note": "+0~2: 4/8/10%（+1以上でデメリット有）"
   },
   {
@@ -438,9 +324,7 @@
     "target": "atk",
     "stackMode": "multiplicativePercent",
     "valueUnit": "%",
-    "default": 8,
-    "cap": 10,
-    "condition": "incant_only",
+    "valuesByLevel": [0.04,0.08,0.10],
     "note": "+0~2: 4/8/10%（+1以上でデメリット有）"
   },
 
@@ -450,10 +334,7 @@
     "target": "hp",
     "stackMode": "multiplicativePercent",
     "valueUnit": "%",
-    "default": 50,
-    "cap": 50,
-    "durationSec": 30,
-    "condition": "on_arts_active",
+    "valuesByLevel": [0.5],
     "note": "最大HP1.5倍（30秒）。効果終了後も攻撃を受けるまで持続の挙動あり"
   },
   {
@@ -462,10 +343,7 @@
     "target": "atk",
     "stackMode": "multiplicativePercent",
     "valueUnit": "%",
-    "default": 16,
-    "cap": 16,
-    "durationSec": 30,
-    "condition": "on_arts_active",
+    "valuesByLevel": [0.16],
     "note": "約1.16倍（30秒）"
   },
   {
@@ -474,10 +352,7 @@
     "target": "atk",
     "stackMode": "multiplicativePercent",
     "valueUnit": "%",
-    "default": 25,
-    "cap": 25,
-    "durationSec": 30,
-    "condition": "ally_or_family_only",
+    "valuesByLevel": [0.25],
     "note": "与ダメ1.25倍（自身には効果なし）"
   }
 ]
