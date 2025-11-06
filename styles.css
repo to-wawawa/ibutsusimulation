@@ -303,4 +303,47 @@ button:hover { border-color: var(--accent); }
 
 
 
+/* =========================
+   スマホ折りたたみUI
+   ========================= */
+@media (max-width: 700px) {
+  .collapsible {
+    cursor: pointer;
+    position: relative;
+    padding-right: 28px;
+  }
+
+  .collapsible::after {
+    content: "▼";
+    position: absolute;
+    right: 8px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    height: 1em;
+    color: var(--muted);
+    transition: transform 0.3s, color 0.3s;
+  }
+
+  .collapsible.active::after {
+    transform: rotate(180deg);
+    color: var(--accent);
+  }
+
+  /* 折りたたみ対象を非表示に */
+  .collapsible-target {
+    display: none;
+  }
+
+  /* 開いている時だけ表示 */
+  .collapsible-target.open {
+    display: block;
+    animation: fadeIn 0.25s ease-in;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-4px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+}
 
