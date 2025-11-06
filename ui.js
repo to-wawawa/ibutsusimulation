@@ -286,3 +286,57 @@
 
   window.initUI = initUI;
 })();
+
+
+// =============================
+// スマホ用 折りたたみ制御 + 状態記憶付き
+// =============================
+window.addEventListener("DOMContentLoaded", () => {
+  const headers = document.querySelectorAll(".collapsible");
+
+  headers.forEach(header => {
+    const targetSel = header.dataset.target;
+    const target = document.querySelector(targetSel);
+    if (!target) return;
+
+    const storageKey = `collapse_${targetSel}`; // 例: collapse_#effect-list
+
+    // 状態復元
+    const restoreState = () => {
+      const isMobile = window.innerWidth <= 700;
+      const saved = localStorage.getItem(storageKey);
+
+      if (isMobile) {
+        target.classList.add("collapsible-target");
+        const open = saved === "open";
+        header.classList.toggle("active", open);
+        target.classList.toggle("open", open);
+      } else {
+        // PCでは常に展開
+        target.classList.remove("collapsible-target", "open");
+        header.classList.remove("active");
+      }
+    };
+
+    // 状態保存
+    const saveState = () => {
+      const isOpen = target.classList.contains("open");
+      localStorage.setItem(storageKey, isOpen ? "open" : "closed");
+    };
+
+    // 初期状態（常に閉じた状態で開始）
+    localStorage.setItem(storageKey, localStorage.getItem(storageKey) || "closed");
+    restoreState();
+
+    // ウィンドウサイズ変化時も状態を更新
+    window.addEventListener("resize", restoreState);
+
+    // タップで開閉切り替え
+    header.addEventListener("click", () => {
+      if (window.innerWidth > 700) return; // PCでは無効
+      header.classList.toggle("active");
+      target.classList.toggle("open");
+      saveState();
+    });
+  });
+});
