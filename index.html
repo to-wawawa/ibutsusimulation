@@ -9,7 +9,7 @@
 <body>
   <header>
     <h1>遺物効果シミュレーター</h1>
-    <p>18スロットに効果ジャンルをD&D → レベルや値を入力 → 最終値を算出</p>
+    <p>18スロットに効果ジャンルをドラッグアンドドロップ → レベルや値を入力 → 最終値が結果欄に算出</p>
   </header>
 
   <section class="inputs">
@@ -33,14 +33,16 @@
 
   <section class="workspace">
     <div class="palette">
-      <h2>効果ジャンル（ドラッグしてスロットにドロップ）</h2>
+      <!-- ▼ 変更1：collapsible追加 -->
+      <h2 class="collapsible" data-target="#effect-list">効果ジャンル（ドラッグしてスロットにドロップ）</h2>
       <div id="palette-tabs" class="tabs" role="tablist" aria-label="効果ジャンル"></div>
       <input id="palette-search" type="search" placeholder="検索..." />
       <div id="effect-list" class="effect-list"></div>
     </div>
 
     <div class="slots">
-      <h2>スロット（18）</h2>
+      <!-- ▼ 変更2：collapsible追加 -->
+      <h2 class="collapsible" data-target="#slot-grid">スロット（18）</h2>
       <div id="slot-grid" class="slot-grid"></div>
     </div>
   </section>
@@ -48,7 +50,7 @@
   <section class="output">
     <h2>結果</h2>
     <div class="results">
-      <div>最終攻撃倍率: <strong id="out-atk">1.00x</strong></div>
+      <div>最終攻撃倍率: <strong id="out-atk">1.00倍</strong></div>
       <div>最終HP: <strong id="out-hp">0</strong></div>
       <div>最終スタミナ: <strong id="out-sta">0</strong></div>
       <div>最終FP: <strong id="out-fp">0</strong></div>
@@ -64,10 +66,10 @@
   </footer>
 
   <!-- 読み込み順が重要 -->
-    <script src="./main.js" defer></script>
-    <script src="./state.js" defer></script>
-    <script src="./calculator.js" defer></script>
-    <script src="./data.js" defer></script>
-    <script src="./ui.js" defer></script>
-  </body>
+  <script src="./main.js" defer></script>
+  <script src="./state.js" defer></script>
+  <script src="./calculator.js" defer></script>
+  <script src="./data.js" defer></script>
+  <script src="./ui.js" defer></script>
+</body>
 </html>
