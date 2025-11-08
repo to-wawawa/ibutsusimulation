@@ -288,6 +288,7 @@
 })();
 
 
+
 // =============================
 // スマホ用 折りたたみ制御 + 状態記憶付き
 // =============================
@@ -340,3 +341,67 @@ window.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+
+// ===============================
+// 同カテゴリ競合チェック（3枠1セット）
+// ===============================
+
+function checkSlotConflicts() {
+  const slotGrid = document.getElementById("slot-grid");
+  if (!slotGrid) return;
+
+  const slots = Array.from(slotGrid.querySelectorAll(".slot"));
+  const slotData = slots.map(slot => {
+    const data = slot.dataset;
+    return {
+      el: slot,
+      category: data.category || null
+    };
+  });
+
+  // 全スロットの背景リセット
+  slots.forEach(s => s.classList.remove("conflict"));
+
+  // 各3枠ごとにカテゴリ重複を確認
+  for (let i = 0; i < slotData.length; i += 3) {
+    const group = slotData.slice(i, i + 3);
+    const seen = new Map();
+
+    for (const s of group) {
+      if (!s.category) continue;
+      if (seen.has(s.category)) {
+        // 重複発見：このカテゴリは既に存在
+        s.el.classList.add("conflict");
+        seen.get(s.category).classList.add("conflict");
+        showConflictPopup();
+      } else {
+        seen.set(s.category, s.el);
+      }
+    }
+  }
+}
+
+// ===============================
+// ポップアップ表示関数（1秒間）
+// ===============================
+let conflictTimeout;
+function showConflictPopup() {
+  clearTimeout(conflictTimeout);
+  let popup = document.getElementById("conflict-popup");
+  if (!popup) {
+    popup = document.createElement("div");
+    popup.id = "conflict-popup";
+    popup.textContent = "存在しない組み合わせです";
+    document.body.appendChild(popup);
+  }
+
+  popup.classList.add("visible");
+  conflictTimeout = setTimeout(() => popup.classList.remove("visible"), 1000);
+}
+
+// ===============================
+// スロット更新時に競合チェックを呼ぶ
+// ===============================
+// 例：ドラッグ＆ドロップ完了・削除後・値変更後などに呼び出し
+// 既存コードで slot の状態変更が行われる箇所に
+// checkSlotConflicts(); を追加してください。
