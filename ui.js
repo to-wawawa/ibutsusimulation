@@ -1,76 +1,45 @@
-// ui.js（10/8以前の完全版）
+// ui.js（最適化版）
 
 document.addEventListener("DOMContentLoaded", () => {
-  // --------------------------
   // 折りたたみUI
-  // --------------------------
-  const collapsibles = document.querySelectorAll(".collapsible");
-  collapsibles.forEach(btn => {
+  document.querySelectorAll(".collapsible").forEach(btn => {
     btn.addEventListener("click", () => {
       const target = document.getElementById(btn.dataset.target);
       if (!target) return;
-      if (target.classList.contains("open")) {
-        target.classList.remove("open");
-        btn.classList.remove("active");
-      } else {
-        target.classList.add("open");
-        btn.classList.add("active");
-      }
+      btn.classList.toggle("active");
+      target.classList.toggle("open");
     });
   });
 
-  // --------------------------
-  // パレットタブ切り替え
-  // --------------------------
-  const tabButtons = document.querySelectorAll(".tab-btn");
-  tabButtons.forEach(btn => {
+  // タブ切り替え
+  document.querySelectorAll(".tab-btn").forEach(btn => {
     btn.addEventListener("click", () => {
       const parent = btn.parentElement;
       if (!parent) return;
-
-      // 全タブを非アクティブ化
       parent.querySelectorAll(".tab-btn").forEach(b => b.classList.remove("active"));
-      // クリックしたタブをアクティブ化
       btn.classList.add("active");
 
-      // 表示する効果リスト切り替え
       const targetId = btn.dataset.target;
       const effectList = document.getElementById("effect-list");
       if (effectList) {
-        Array.from(effectList.children).forEach(child => {
-          if (child.dataset.genre === targetId) {
-            child.style.display = "";
-          } else {
-            child.style.display = "none";
-          }
+        Array.from(effectList.children).forEach(item => {
+          item.style.display = (!targetId || item.dataset.genre === targetId) ? "" : "none";
         });
       }
     });
   });
 
-  // --------------------------
   // 効果検索
-  // --------------------------
   const searchInput = document.getElementById("palette-search");
-  if (searchInput) {
-    searchInput.addEventListener("input", () => {
-      const filter = searchInput.value.toLowerCase();
-      const effectList = document.getElementById("effect-list");
-      if (!effectList) return;
-      Array.from(effectList.children).forEach(item => {
-        const name = item.querySelector(".name")?.textContent.toLowerCase() || "";
-        if (name.includes(filter)) {
-          item.style.display = "";
-        } else {
-          item.style.display = "none";
-        }
-      });
+  searchInput?.addEventListener("input", () => {
+    const filter = searchInput.value.toLowerCase();
+    document.querySelectorAll("#effect-list .effect-pill").forEach(item => {
+      const name = item.querySelector(".name")?.textContent.toLowerCase() || "";
+      item.style.display = name.includes(filter) ? "" : "none";
     });
-  }
+  });
 
-  // --------------------------
   // スロット初期化
-  // --------------------------
   const slotGrid = document.getElementById("slot-grid");
   if (slotGrid) {
     for (let i = 0; i < 18; i++) {
@@ -78,7 +47,6 @@ document.addEventListener("DOMContentLoaded", () => {
       slot.className = "slot";
       slot.dataset.index = i;
 
-      // ヘッダー
       const header = document.createElement("div");
       header.className = "slot-header";
       const title = document.createElement("span");
@@ -87,7 +55,6 @@ document.addEventListener("DOMContentLoaded", () => {
       header.appendChild(title);
       slot.appendChild(header);
 
-      // ボディ
       const body = document.createElement("div");
       body.className = "slot-body";
       slot.appendChild(body);
@@ -96,9 +63,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  // --------------------------
-  // スロットのクリアボタン
-  // --------------------------
+  // スロットクリア
   slotGrid?.addEventListener("click", e => {
     if (e.target.classList.contains("clear")) {
       const slot = e.target.closest(".slot");
@@ -109,15 +74,10 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  // --------------------------
-  // ドラッグ＆ドロップ初期化（効果リスト → スロット）
-  // --------------------------
-  const effectList = document.getElementById("effect-list");
-  effectList?.querySelectorAll(".effect-pill").forEach(pill => {
+  // ドラッグ＆ドロップ
+  document.querySelectorAll(".effect-pill").forEach(pill => {
     pill.setAttribute("draggable", "true");
-    pill.addEventListener("dragstart", e => {
-      e.dataTransfer.setData("text/plain", pill.dataset.id);
-    });
+    pill.addEventListener("dragstart", e => e.dataTransfer.setData("text/plain", pill.dataset.id));
   });
 
   slotGrid?.querySelectorAll(".slot").forEach(slot => {
@@ -135,12 +95,4 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   });
-
-  // --------------------------
-  // 検出・競合ポップアップ初期化
-  // --------------------------
-  const conflictPopup = document.getElementById("conflict-popup");
-  if (conflictPopup) {
-    // 必要に応じて visible クラスを付与/削除
-  }
 });
