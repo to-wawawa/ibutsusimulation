@@ -251,7 +251,7 @@
     "target": "atk",
     "stackMode": "multiplicativePercent",
     "valueUnit": "%",
-    "valuesByLevel": [0.10],
+    "valuesByLevel": [0.10,0.16,0.2],
     "note": "約1.1倍（別の状態異常強化と重複可）"
   },
   {
@@ -260,7 +260,7 @@
     "target": "atk",
     "stackMode": "multiplicativePercent",
     "valueUnit": "%",
-    "valuesByLevel": [0.10],
+    "valuesByLevel": [0.10,0.16,0.2],
     "note": "約1.1倍"
   },
   {
@@ -269,7 +269,7 @@
     "target": "atk",
     "stackMode": "multiplicativePercent",
     "valueUnit": "%",
-    "valuesByLevel": [0.10],
+    "valuesByLevel": [0.10,0.16,0.2],
     "note": "約1.1倍"
   },
 
@@ -328,6 +328,25 @@
     "note": "+0~2: 4/8/10%（+1以上でデメリット有）"
   },
 
+    {
+    "id": "magic_boost_pct",
+    "name": "〇〇の魔術を強化（%）",
+    "target": "atk",
+    "stackMode": "multiplicativePercent",
+    "valueUnit": "%",
+    "valuesByLevel": [0.12],
+    "note": "+0~2: 4/8/10%（+1以上でデメリット有）"
+  },
+  {
+    "id": "incant_boost_pct",
+    "name": "〇〇の祈祷を強化（%）",
+    "target": "atk",
+    "stackMode": "multiplicativePercent",
+    "valueUnit": "%",
+    "valuesByLevel": [0.12],
+    "note": "+0~2: 4/8/10%（+1以上でデメリット有）"
+  },
+
   {
     "id": "char_hermit_art_hp_mul",
     "name": "【隠者】アーツ発動時 最大HP上昇（30秒）",
@@ -356,3 +375,4 @@
     "note": "与ダメ1.25倍（自身には効果なし）"
   }
 ]
+
