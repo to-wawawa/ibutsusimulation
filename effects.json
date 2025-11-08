@@ -79,6 +79,7 @@
     "id": "atk_phys_pct",
     "name": "物理攻撃力上昇（%）",
     "target": "atk",
+  　"category": "攻撃力上昇",
     "stackMode": "multiplicativePercent",
     "valueUnit": "%",
     "valuesByLevel": [0.04, 0.05, 0.06, 0.10, 0.12]
@@ -87,6 +88,7 @@
     "id": "atk_magic_pct",
     "name": "魔力攻撃力上昇（%）",
     "target": "atk",
+  　"category": "攻撃力上昇",
     "stackMode": "multiplicativePercent",
     "valueUnit":"%",
     "valuesByLevel": [0.04, 0.05, 0.06, 0.10, 0.12]
@@ -95,6 +97,7 @@
     "id": "atk_fire_pct",
     "name": "炎攻撃力上昇（%）",
     "target": "atk",
+  　"category": "攻撃力上昇",
     "stackMode": "multiplicativePercent",
     "valueUnit": "%",
     "valuesByLevel": [0.04, 0.05, 0.06, 0.10, 0.12]
@@ -111,6 +114,7 @@
     "id": "atk_holy_pct",
     "name": "聖攻撃力上昇（%）",
     "target": "atk",
+  　"category": "攻撃力上昇",
     "stackMode": "multiplicativePercent",
     "valueUnit": "%",
     "valuesByLevel": [0.04, 0.05, 0.06, 0.10, 0.12]
@@ -313,6 +317,7 @@
     "id": "deep_magic_boost_pct",
     "name": "【深層】魔術強化（%）",
     "target": "atk",
+  　"category": "攻撃力上昇",
     "stackMode": "multiplicativePercent",
     "valueUnit": "%",
     "valuesByLevel": [0.04,0.08,0.10],
@@ -322,6 +327,7 @@
     "id": "deep_incant_boost_pct",
     "name": "【深層】祈祷強化（%）",
     "target": "atk",
+  　"category": "攻撃力上昇",
     "stackMode": "multiplicativePercent",
     "valueUnit": "%",
     "valuesByLevel": [0.04,0.08,0.10],
@@ -375,4 +381,5 @@
     "note": "与ダメ1.25倍（自身には効果なし）"
   }
 ]
+
 
