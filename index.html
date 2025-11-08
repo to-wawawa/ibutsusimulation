@@ -5,15 +5,8 @@
   <title>遺物効果シミュレーター</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link href="./styles.css" rel="stylesheet" />
-</head>  <div id="app"></div>
-
-  <!-- 読み込み順が重要 -->
-  <script src="./main.js" defer></script>
-  <script src="./state.js" defer></script>
-  <script src="./calculator.js" defer></script>
-  <script src="./data.js" defer></script>
-  <script src="./ui.js" defer></script>
-</body>
+</head>
+<body>
   <header>
     <h1>遺物効果シミュレーター</h1>
     <p>18スロットに効果ジャンルをドラッグアンドドロップ → レベルや値を入力 → 最終値が結果欄に算出</p>
@@ -40,23 +33,20 @@
 
   <section class="workspace">
     <div class="palette">
-      <!-- ▼ 変更1：collapsible追加 -->
-      <h2 class="collapsible" data-target="#effect-list">効果ジャンル（ドラッグしてスロットにドロップ）</h2>
+      <h2 class="collapsible" data-target="effect-list">効果ジャンル（ドラッグしてスロットにドロップ）</h2>
       <div id="palette-tabs" class="tabs" role="tablist" aria-label="効果ジャンル"></div>
       <input id="palette-search" type="search" placeholder="検索..." />
-      <div id="effect-list" class="effect-list"></div>
-    <div id="effect-list" class="effect-list collapsible-target"></div>
-    <div id="slot-grid" class="slot-grid collapsible-target"></div>
+
+      <!-- 効果リスト折りたたみ対象 -->
+      <div id="effect-list" class="effect-list collapsible-target"></div>
     </div>
 
     <div class="slots">
-      <!-- ▼ 変更2：collapsible追加 -->
-      <h2 class="collapsible" data-target="#slot-grid">スロット（18）</h2>
-      <div id="slot-grid" class="slot-grid"></div>
-    </div>
-    <div id="effect-list" class="effect-list collapsible-target"></div>
-    <div id="slot-grid" class="slot-grid collapsible-target"></div>
+      <h2 class="collapsible" data-target="slot-grid">スロット（18）</h2>
 
+      <!-- スロットグリッド折りたたみ対象 -->
+      <div id="slot-grid" class="slot-grid collapsible-target"></div>
+    </div>
   </section>
 
   <section class="output">
@@ -76,6 +66,9 @@
       神攻略wiki Night Reign 遺物効果</a>（引用は必要最小限）
     </small>
   </footer>
+
+  <!-- 競合ポップアップ -->
+  <div id="conflict-popup">存在しない組み合わせです</div>
 
   <!-- 読み込み順が重要 -->
   <script src="./main.js" defer></script>
