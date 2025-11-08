@@ -7,73 +7,71 @@
   <link href="./styles.css" rel="stylesheet" />
 </head>
 <body>
-  <header>
-    <h1>遺物効果シミュレーター</h1>
-    <p>18スロットに効果ジャンルをドラッグアンドドロップ → レベルや値を入力 → 最終値が結果欄に算出</p>
-  </header>
+  <div id="app">
+    <header>
+      <h1>遺物効果シミュレーター</h1>
+      <p>18スロットに効果ジャンルをドラッグアンドドロップ → レベルや値を入力 → 最終値が結果欄に算出</p>
+    </header>
 
-  <section class="inputs">
-    <h2>基礎値</h2>
-    <div class="base-inputs">
-      <label>攻撃倍率の基準（1.0=等倍）
-        <input id="base-atk" type="number" step="0.01" value="1.00">
-      </label>
-      <label>HP基礎値
-        <input id="base-hp" type="number" step="1" value="1000">
-      </label>
-      <label>スタミナ基礎値
-        <input id="base-sta" type="number" step="1" value="100">
-      </label>
-      <label>FP基礎値
-        <input id="base-fp" type="number" step="1" value="100">
-      </label>
-      <button id="reset-btn">すべてリセット</button>
-    </div>
-  </section>
+    <section class="inputs">
+      <h2>基礎値</h2>
+      <div class="base-inputs">
+        <label>攻撃倍率の基準（1.0=等倍）
+          <input id="base-atk" type="number" step="0.01" value="1.00">
+        </label>
+        <label>HP基礎値
+          <input id="base-hp" type="number" step="1" value="1000">
+        </label>
+        <label>スタミナ基礎値
+          <input id="base-sta" type="number" step="1" value="100">
+        </label>
+        <label>FP基礎値
+          <input id="base-fp" type="number" step="1" value="100">
+        </label>
+        <button id="reset-btn">すべてリセット</button>
+      </div>
+    </section>
 
-  <section class="workspace">
-    <div class="palette">
-      <h2 class="collapsible" data-target="effect-list">効果ジャンル（ドラッグしてスロットにドロップ）</h2>
-      <div id="palette-tabs" class="tabs" role="tablist" aria-label="効果ジャンル"></div>
-      <input id="palette-search" type="search" placeholder="検索..." />
+    <section class="workspace">
+      <div class="palette">
+        <h2 class="collapsible" data-target="effect-list">効果ジャンル（ドラッグしてスロットにドロップ）</h2>
+        <div id="palette-tabs" class="tabs" role="tablist" aria-label="効果ジャンル"></div>
+        <input id="palette-search" type="search" placeholder="検索..." />
+        <div id="effect-list" class="effect-list collapsible-target"></div>
+      </div>
 
-      <!-- 効果リスト折りたたみ対象 -->
-      <div id="effect-list" class="effect-list collapsible-target"></div>
-    </div>
+      <div class="slots">
+        <h2 class="collapsible" data-target="slot-grid">スロット（18）</h2>
+        <div id="slot-grid" class="slot-grid collapsible-target"></div>
+      </div>
+    </section>
 
-    <div class="slots">
-      <h2 class="collapsible" data-target="slot-grid">スロット（18）</h2>
+    <section class="output">
+      <h2>結果</h2>
+      <div class="results">
+        <div>最終攻撃倍率: <strong id="out-atk">1.00倍</strong></div>
+        <div>最終HP: <strong id="out-hp">0</strong></div>
+        <div>最終スタミナ: <strong id="out-sta">0</strong></div>
+        <div>最終FP: <strong id="out-fp">0</strong></div>
+      </div>
+    </section>
 
-      <!-- スロットグリッド折りたたみ対象 -->
-      <div id="slot-grid" class="slot-grid collapsible-target"></div>
-    </div>
-  </section>
+    <footer>
+      <small>
+        出典: <a href="https://kamikouryaku.net/nightreign_eldenring/?%E9%81%BA%E7%89%A9%E5%8A%B9%E6%9E%9C" target="_blank" rel="noopener">
+        神攻略wiki Night Reign 遺物効果</a>（引用は必要最小限）
+      </small>
+    </footer>
 
-  <section class="output">
-    <h2>結果</h2>
-    <div class="results">
-      <div>最終攻撃倍率: <strong id="out-atk">1.00倍</strong></div>
-      <div>最終HP: <strong id="out-hp">0</strong></div>
-      <div>最終スタミナ: <strong id="out-sta">0</strong></div>
-      <div>最終FP: <strong id="out-fp">0</strong></div>
-    </div>
-  </section>
-
-  <footer>
-    <small>
-      出典: <a href="https://kamikouryaku.net/nightreign_eldenring/?%E9%81%BA%E7%89%A9%E5%8A%B9%E6%9E%9C" target="_blank" rel="noopener">
-      神攻略wiki Night Reign 遺物効果</a>（引用は必要最小限）
-    </small>
-  </footer>
-
-  <!-- 競合ポップアップ -->
-  <div id="conflict-popup">存在しない組み合わせです</div>
+    <div id="conflict-popup">存在しない組み合わせです</div>
+  </div>
 
   <!-- 読み込み順が重要 -->
-<script src="./data.js" defer></script>
-<script src="./ui.js" defer></script>
-<script src="./main.js" defer></script>
-<script src="./state.js" defer></script>
-<script src="./calculator.js" defer></script>
+  <script src="./data.js" defer></script>
+  <script src="./ui.js" defer></script>
+  <script src="./main.js" defer></script>
+  <script src="./state.js" defer></script>
+  <script src="./calculator.js" defer></script>
 </body>
+
 </html>
