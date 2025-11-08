@@ -5,8 +5,15 @@
   <title>遺物効果シミュレーター</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link href="./styles.css" rel="stylesheet" />
-</head>
-<body>
+</head>  <div id="app"></div>
+
+  <!-- 読み込み順が重要 -->
+  <script src="./main.js" defer></script>
+  <script src="./state.js" defer></script>
+  <script src="./calculator.js" defer></script>
+  <script src="./data.js" defer></script>
+  <script src="./ui.js" defer></script>
+</body>
   <header>
     <h1>遺物効果シミュレーター</h1>
     <p>18スロットに効果ジャンルをドラッグアンドドロップ → レベルや値を入力 → 最終値が結果欄に算出</p>
