@@ -347,3 +347,36 @@ button:hover { border-color: var(--accent); }
   }
 }
 
+/* ===============================
+   スロット競合時の警告スタイル
+   =============================== */
+.slot.conflict {
+  background-color: #ffd6d6 !important;
+  border-color: #ff8080 !important;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+/* ===============================
+   競合ポップアップ
+   =============================== */
+#conflict-popup {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(255, 200, 200, 0.95);
+  color: #440000;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 0.95rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 9999;
+}
+#conflict-popup.visible {
+  opacity: 1;
+}
+
