@@ -12,7 +12,7 @@ window.initUI = function (effects) {
   // 🔧 初期変数と状態
   // --------------------------------
   const state = {
-    slots: Array(9).fill(null), // スロット9枠
+    slots: Array(9).fill(null), // 3枠×3セット = 9スロット
     openSections: JSON.parse(localStorage.getItem("openSections") || "{}"),
   };
 
@@ -180,7 +180,7 @@ window.initUI = function (effects) {
     for (const j of group) {
       const slotEl = slotGrid.querySelector(`.slot[data-index="${j}"]`);
       slotEl.classList.add("conflict");
-      setTimeout(() => slotEl.classList.remove("conflict"), 1000);
+      setTimeout(() => slotEl.classList.remove("conflict"), 1200);
     }
   }
 
@@ -204,7 +204,7 @@ window.initUI = function (effects) {
   }
 
   // --------------------------------
-  // 🔧 結果表示（仮実装）
+  // 🔧 結果表示（安定化）
   // --------------------------------
   function updateResults() {
     const summary = [];
@@ -218,11 +218,11 @@ window.initUI = function (effects) {
           ? eff.valuesByLevel[level]
           : (eff.default || 0) * (1 + level * 0.03);
 
-      summary.push(`${eff.name}: +${value}${eff.valueUnit || "%"}`);
+      summary.push(`<div>${eff.name}: <strong>+${value}${eff.valueUnit || "%"}</strong></div>`);
     }
 
     resultsEl.innerHTML = summary.length
-      ? summary.map(s => `<strong>${s}</strong>`).join(" / ")
+      ? summary.join("")
       : "効果を選択してください。";
   }
 
