@@ -25,42 +25,30 @@
       id: "max_hp_flat",
       name: "最大HP上昇（固定）",
       target: "hp",
-      stackMode: "flat",
+      stackMode: "additiveFlat",
       valueUnit: "flat",
-      default: 100,
-      cap: 100,
+      valuesByLevel: [100],
+      maxLevel: 0,
       inputLocked: true
     },
     {
       id: "max_fp_flat",
       name: "最大FP上昇（固定）",
       target: "fp",
-      stackMode: "flat",
+      stackMode: "additiveFlat",
       valueUnit: "flat",
-      default: 25,
-      cap: 25,
+      valuesByLevel: [25],
+      maxLevel: 0,
       inputLocked: true
     },
     {
       id: "vigor_plus_1_3",
       name: "生命力+1~3（最大HP固定加算）",
       target: "hp",
-      stackMode: "flat",
+      stackMode: "additiveFlat",
       valueUnit: "flat",
-      valuesByLevel: [0, 20, 40, 60, 60],
+      valuesByLevel: [0, 20, 40, 60],
       maxLevel: 3
-    },
-    // ★ 追加：例の5段階（+0～+4）効果。+2 を選ぶと 6% 表示＆計算反映
-    {
-      id: "atk_example_pct",
-      name: "攻撃力上昇（例）",
-      target: "atk",
-      stackMode: "multiplicativePercent", // 必要に応じて additivePercent に変更可
-      valueUnit: "%",
-      valuesByLevel: [4, 5, 6, 10, 12],   // +0,+1,+2,+3,+4
-      maxLevel: 4,
-      note: "UIは（無印）/+1/+2/+3/+4 の5段階で表示"
     }
   ];
 })();
-``
