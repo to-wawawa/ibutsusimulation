@@ -187,6 +187,8 @@
     "stackMode": "multiplicativePercent",
     "valueUnit": "%",
     "valuesByLevel": [0.05],
+    "allowDeep": false,
+    "deepOnly": true,
     "note": "封牢ごとに約1.05倍、永続。回数分スロットに入れるか合成値を入力"
   },
   {
@@ -196,6 +198,8 @@
     "stackMode": "multiplicativePercent",
     "valueUnit": "%",
     "valuesByLevel": [0.07],
+    "allowDeep": false,
+    "deepOnly": true,
     "note": "1体につき約1.07倍、永続。回数分スロットに入れるか合成値を入力"
   },
 
@@ -251,7 +255,7 @@
     "target": "atk",
     "stackMode": "multiplicativePercent",
     "valueUnit": "%",
-    "valuesByLevel": [0.10,0.16,0.2],
+    "valuesByLevel": [0.10],
     "note": "約1.1倍（別の状態異常強化と重複可）"
   },
   {
@@ -260,7 +264,7 @@
     "target": "atk",
     "stackMode": "multiplicativePercent",
     "valueUnit": "%",
-    "valuesByLevel": [0.10,0.16,0.2],
+    "valuesByLevel": [0.10],
     "note": "約1.1倍"
   },
   {
@@ -269,18 +273,20 @@
     "target": "atk",
     "stackMode": "multiplicativePercent",
     "valueUnit": "%",
-    "valuesByLevel": [0.10,0.16,0.2],
+    "valuesByLevel": [0.10],
     "note": "約1.1倍"
   },
 
   {
-    "id": "deep_max_hp_pct",
-    "name": "【深層】最大HP上昇（%）",
-    "target": "hp",
-    "stackMode": "multiplicativePercent",
-    "valueUnit": "%",
-    "valuesByLevel": [0.10],
-    "note": "+10%"
+  "id": "deep_max_hp_pct",
+  "name": "【深層】最大HP上昇（%）",
+  "target": "hp",
+  "stackMode": "multiplicativePercent",
+  "valueUnit": "%",
+  "valuesByLevel": [0.10],
+  "allowDeep": true,
+  "deepOnly": true,
+  "note": "+10%"
   },
   {
     "id": "deep_max_fp_pct",
@@ -289,6 +295,8 @@
     "stackMode": "multiplicativePercent",
     "valueUnit": "%",
     "valuesByLevel": [0.15],
+    "allowDeep": true,
+    "deepOnly": true,
     "note": "+15%"
   },
   {
@@ -298,15 +306,19 @@
     "stackMode": "multiplicativePercent",
     "valueUnit": "%",
     "valuesByLevel": [0.12],
+    "allowDeep": true,
+    "deepOnly": true,
     "note": "約1.12倍（+12%）"
   },
   {
     "id": "deep_atk_element_pct",
-    "name": "【深層】属性攻撃力上昇（% 一括）",
+    "name": "【深層】属性攻撃力上昇（%）",
     "target": "atk",
     "stackMode": "multiplicativePercent",
     "valueUnit": "%",
     "valuesByLevel": [0.04,0.08,0.10],
+    "allowDeep": true,
+    "deepOnly": true,
     "note": "属性一括: 4/8/10%（+1以上でデメリット有）"
   },
   {
@@ -316,6 +328,8 @@
     "stackMode": "multiplicativePercent",
     "valueUnit": "%",
     "valuesByLevel": [0.04,0.08,0.10],
+    "allowDeep": true,
+    "deepOnly": true,
     "note": "+0~2: 4/8/10%（+1以上でデメリット有）"
   },
   {
@@ -325,25 +339,8 @@
     "stackMode": "multiplicativePercent",
     "valueUnit": "%",
     "valuesByLevel": [0.04,0.08,0.10],
-    "note": "+0~2: 4/8/10%（+1以上でデメリット有）"
-  },
-
-    {
-    "id": "magic_boost_pct",
-    "name": "〇〇の魔術を強化（%）",
-    "target": "atk",
-    "stackMode": "multiplicativePercent",
-    "valueUnit": "%",
-    "valuesByLevel": [0.12],
-    "note": "+0~2: 4/8/10%（+1以上でデメリット有）"
-  },
-  {
-    "id": "incant_boost_pct",
-    "name": "〇〇の祈祷を強化（%）",
-    "target": "atk",
-    "stackMode": "multiplicativePercent",
-    "valueUnit": "%",
-    "valuesByLevel": [0.12],
+    "allowDeep": true,
+    "deepOnly": true,
     "note": "+0~2: 4/8/10%（+1以上でデメリット有）"
   },
 
@@ -353,7 +350,7 @@
     "target": "hp",
     "stackMode": "multiplicativePercent",
     "valueUnit": "%",
-    "valuesByLevel": [0.5],
+    "valuesByLevel": [50],
     "note": "最大HP1.5倍（30秒）。効果終了後も攻撃を受けるまで持続の挙動あり"
   },
   {
@@ -375,7 +372,3 @@
     "note": "与ダメ1.25倍（自身には効果なし）"
   }
 ]
-
-
-
-
