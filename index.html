@@ -33,7 +33,7 @@
 
   <section class="workspace">
     <div class="palette">
-      <h2 class="collapsible" data-target="effect-list">効果ジャンル（ドラッグしてスロットにドロップ）</h2>
+      <h2 class="collapsible" data-target="effect-list">効果ジャンル</h2>
       <div id="palette-tabs" class="tabs" role="tablist" aria-label="効果ジャンル"></div>
       <input id="palette-search" type="search" placeholder="検索..." />
       <div id="effect-list" class="effect-list collapsible-target"></div>
@@ -64,11 +64,13 @@
 
   <div id="conflict-popup">存在しない組み合わせです</div>
 
+  <!-- defer付き：DOM構築後に順次ロード -->
   <script src="./data.js" defer></script>
   <script src="./ui.js" defer></script>
   <script src="./state.js" defer></script>
   <script src="./calculator.js" defer></script>
-  <script src="./main.js" defer></script>
 
+  <!-- main.js が最後。全ての定義を読み込んだ後に起動 -->
+  <script src="./main.js"></script>
 </body>
 </html>
