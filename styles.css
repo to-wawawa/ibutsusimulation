@@ -371,3 +371,37 @@ button:hover { border-color: var(--accent); }
     max-height: none;
   }
 }
+/* 🔒 タブ欄の高さを固定（PC + スマホ） */
+.tabs {
+  height: 40px !important;            /* ← タブ行の高さを固定 */
+  min-height: 40px !important;
+  max-height: 40px !important;
+  display: flex !important;
+  align-items: center !important;     /* 中央揃え */
+  flex-wrap: nowrap !important;
+  overflow-x: auto !important;
+  overflow-y: hidden !important;
+  -webkit-overflow-scrolling: touch;
+  padding: 0 4px !important;          /* 上下の余白をゼロに */
+  gap: 6px !important;
+
+  scrollbar-width: none;
+}
+.tabs::-webkit-scrollbar {
+  display: none;
+}
+
+/* 🔒 タブボタンの高さを揃えて固定 */
+.tab-btn {
+  flex-shrink: 0 !important;
+  white-space: nowrap !important;
+  height: 28px !important;            /* ← ボタン高さを固定 */
+  line-height: 28px !important;       /* ← テキストを高さ中央に */
+  padding: 0 12px !important;         /* 左右のみ余白 */
+  font-size: 13px !important;
+  border-radius: 999px !important;
+  border-width: 1px !important;       /* active時と差が出ないよう統一 */
+}
+.tab-btn.active {
+  border-width: 1px !important;       /* 高さ揺れ防止 */
+}
