@@ -1,0 +1,91 @@
+[
+  {
+    "id": "cut_phys_pct",
+    "name": "物理カット率上昇 +1～2",
+    "target": "def",
+    "stackMode": "multiplicativePercent",
+    "valueUnit": "%",
+    "valuesByLevel": [10,12],
+    "allowDeep": true,
+    "stackable": true,
+    "overlap": "カット率"
+  },
+  {
+    "id": "cut_attr_pct",
+    "name": "属性カット率上昇 +0～2",
+    "target": "def",
+    "stackMode": "multiplicativePercent",
+    "valueUnit": "%",
+    "valuesByLevel": [10,10,12],
+    "allowDeep": true,
+    "stackable": true,
+    "overlap": "カット率"
+  },
+  {
+    "id": "cut_magic_pct",
+    "name": "魔力カット率上昇 +0～2",
+    "target": "def",
+    "stackMode": "multiplicativePercent",
+    "valueUnit": "%",
+    "valuesByLevel": [10,15,20],
+    "allowDeep": true,
+    "stackable": true,
+    "overlap": "カット率"
+  },
+  {
+    "id": "cut_fire_pct",
+    "name": "炎カット率上昇 +0～2",
+    "target": "def",
+    "stackMode": "multiplicativePercent",
+    "valueUnit": "%",
+    "valuesByLevel": [10,15,20],
+    "allowDeep": true,
+    "stackable": true,
+    "overlap": "カット率"
+  },
+  {
+    "id": "cut_lightning_pct",
+    "name": "雷カット率上昇 +0～2",
+    "target": "def",
+    "stackMode": "multiplicativePercent",
+    "valueUnit": "%",
+    "valuesByLevel": [10,15,20],
+    "allowDeep": true,
+    "stackable": true,
+    "overlap": "カット率"
+  },
+  {
+    "id": "cut_holy_pct",
+    "name": "聖カット率上昇 +0～2",
+    "target": "def",
+    "stackMode": "multiplicativePercent",
+    "valueUnit": "%",
+    "valuesByLevel": [10,15,20],
+    "allowDeep": true,
+    "stackable": true,
+    "overlap": "カット率"
+  },
+  {
+    "id": "hp_low_cut_boost",
+    "name": "HP低下時、カット率上昇",
+    "target": "def",
+    "stackMode": "multiplicativePercent",
+    "valueUnit": "%",
+    "valuesByLevel": [15],
+    "allowDeep": true,
+    "stackable": false,
+    "overlap": "カット率"
+  },
+  {
+    "id": "phys_def_up_darkkasumi",
+    "name": "物理カット率上昇（霞の暗き夜）",
+    "target": "def",
+    "stackMode": "multiplicativePercent",
+    "valueUnit": "%",
+    "valuesByLevel": [10],
+    "allowDeep": false,
+    "stackable": false,
+    "note": "霞の暗き夜",
+    "overlap": "カット率"
+  }
+]

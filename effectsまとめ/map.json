@@ -1,0 +1,21 @@
+[
+  {
+    "id": "collector_discount",
+    "name": "出撃中、ショップでの購入に必要なルーンが大割引",
+    "target": "special",
+    "stackMode": "special",
+    "allowDeep": false,
+    "stackable": false,
+    "overlap": "その他"
+  },
+  {
+    "id": "rune_discount_demon",
+    "name": "出撃中、ショップでの購入に必要なルーンが大割引（魔の夜）",
+    "target": "special",
+    "stackMode": "special",
+    "allowDeep": false,
+    "stackable": false,
+    "note": "魔の夜",
+    "overlap": "その他"
+  }
+]

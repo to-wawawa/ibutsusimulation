@@ -1,0 +1,78 @@
+[
+  {
+    "id": "weapon_poison_infusion",
+    "name": "出撃時の武器に毒の状態異常を付加",
+    "target": "special",
+    "stackMode": "special",
+    "allowDeep": false,
+    "stackable": false,
+    "overlap": "状態異常付与"
+  },
+  {
+    "id": "weapon_fire_infusion",
+    "name": "出撃時の武器に炎攻撃力を付加",
+    "target": "atk",
+    "stackMode": "special",
+    "allowDeep": false,
+    "stackable": false,
+    "overlap": "属性付与"
+  },
+  {
+    "id": "weapon_holy_infusion",
+    "name": "出撃時の武器に聖攻撃力を付加",
+    "target": "atk",
+    "stackMode": "special",
+    "allowDeep": false,
+    "stackable": false,
+    "overlap": "属性付与"
+  },
+  {
+    "id": "weapon_frost_infusion",
+    "name": "出撃時の武器に冷気の状態異常を付加",
+    "target": "atk",
+    "stackMode": "special",
+    "allowDeep": false,
+    "stackable": false,
+    "overlap": "状態異常付与"
+  },
+  {
+    "id": "weapon_holy_infusion_sanctblade",
+    "name": "出撃時の武器に聖攻撃力を付加（聖律の刃）",
+    "target": "atk",
+    "stackMode": "special",
+    "allowDeep": false,
+    "stackable": false,
+    "note": "聖律の刃",
+    "overlap": "属性付与"
+  },
+  {
+    "id": "weapon_fire_infusion_beast",
+    "name": "出撃時の武器に炎攻撃力を付加（獣の夜）",
+    "target": "atk",
+    "stackMode": "special",
+    "allowDeep": false,
+    "stackable": false,
+    "note": "獣の夜",
+    "overlap": "属性付与"
+  },
+  {
+    "id": "weapon_poison_infusion_scholar",
+    "name": "出撃時の武器に毒の状態異常を付加（識の夜）",
+    "target": "atk",
+    "stackMode": "special",
+    "allowDeep": false,
+    "stackable": false,
+    "note": "識の夜",
+    "overlap": "状態異常付与"
+  },
+  {
+    "id": "weapon_cold_infusion_darkkasumi",
+    "name": "出撃時の武器に冷気の状態異常を付加（霞の暗き夜）",
+    "target": "atk",
+    "stackMode": "special",
+    "allowDeep": false,
+    "stackable": false,
+    "note": "霞の暗き夜",
+    "overlap": "状態異常付与"
+  }
+]

@@ -1,0 +1,257 @@
+[
+  {
+    "id": "vigor_plus_1_3",
+    "name": "生命力+1～3",
+    "target": "hp",
+    "stackMode": "additiveFlat",
+    "valueUnit": "flat",
+    "valuesByLevel": [20,40,60],
+    "allowDeep": true,
+    "stackable": false,
+    "overlap": "HP"
+  },
+  {
+    "id": "mind_plus_1_3",
+    "name": "精神力+1～3",
+    "target": "fp",
+    "stackMode": "additiveFlat",
+    "valueUnit": "flat",
+    "valuesByLevel": [0,5,10,15],
+    "allowDeep": true,
+    "stackable": false,
+    "overlap": "FP"
+  },
+  {
+    "id": "endurance_plus_1_3",
+    "name": "持久力+1～3",
+    "target": "stamina",
+    "stackMode": "additiveFlat",
+    "valueUnit": "flat",
+    "valuesByLevel": [0,2,4,6],
+    "allowDeep": true,
+    "stackable": false,
+    "overlap": "スタミナ"
+  },
+  {
+    "id": "magic_boost_pct",
+    "name": "魔術強化 +0～2",
+    "target": "atk",
+    "stackMode": "multiplicativePercent",
+    "valueUnit": "%",
+    "valuesByLevel": [4,8,10],
+    "allowDeep": true,
+    "stackable": true,
+    "overlap": "攻撃力"
+  },
+  {
+    "id": "incant_boost_pct",
+    "name": "祈祷強化 +0～2",
+    "target": "atk",
+    "stackMode": "multiplicativePercent",
+    "valueUnit": "%",
+    "valuesByLevel": [4,8,10],
+    "allowDeep": true,
+    "stackable": true,
+    "overlap": "攻撃力"
+  },
+  {
+    "id": "atk_arts_buff_avenger",
+    "name": "【復讐者】アーツ発動時 味方強化（30秒）",
+    "target": "atk",
+    "stackMode": "multiplicativePercent",
+    "valueUnit": "%",
+    "valuesByLevel": [25],
+    "allowDeep": false,
+    "stackable": false,
+    "overlap": "特定強化"
+  },
+  {
+    "id": "atk_arts_buff_lady",
+    "name": "【レディ】スキルのダメージ上昇",
+    "target": "atk",
+    "stackMode": "multiplicativePercent",
+    "valueUnit": "%",
+    "valuesByLevel": [20],
+    "allowDeep": false,
+    "stackable": false,
+    "overlap": "特定強化"
+  },
+  {
+    "id": "arts_fire_followup",
+    "name": "【追跡者】スキル使用時、通常攻撃で炎を纏った追撃を行う（大剣のみ）",
+    "target": "atk",
+    "stackMode": "special",
+    "valueUnit": "flat",
+    "allowDeep": false,
+    "stackable": false,
+    "note": "にび色の砥石",
+    "overlap": "戦技付与"
+  },
+  {
+    "id": "arts_flame_burst_tracker",
+    "name": "【追跡者】アーツ発動時、周囲を延焼",
+    "target": "atk",
+    "stackMode": "special",
+    "allowDeep": false,
+    "stackable": false,
+    "note": "追跡者の耳飾り",
+    "overlap": "戦技付与"
+  },
+  {
+    "id": "arts_skill_count_plus1",
+    "name": "【追跡者】スキルの使用回数+1",
+    "target": "special",
+    "stackMode": "special",
+    "allowDeep": false,
+    "stackable": false,
+    "note": "追跡者の耳飾り",
+    "overlap": "特定強化"
+  },
+  {
+    "id": "arts_skill_extend_guardian",
+    "name": "【守護者】スキルの持続時間延長",
+    "target": "special",
+    "stackMode": "special",
+    "allowDeep": false,
+    "stackable": false,
+    "note": "石の杭",
+    "overlap": "戦技付与"
+  },
+  {
+    "id": "arts_whirlwind_guardian",
+    "name": "【守護者】斧槍タメ攻撃時、つむじ風が発生",
+    "target": "atk",
+    "stackMode": "special",
+    "allowDeep": false,
+    "stackable": false,
+    "note": "三冊目の本",
+    "overlap": "戦技付与"
+  },
+  {
+    "id": "arts_wave_on_guard_guardian",
+    "name": "【守護者】アビリティ発動中、ガード成功時、衝撃波が発生",
+    "target": "special",
+    "stackMode": "special",
+    "allowDeep": false,
+    "stackable": false,
+    "note": "魔女のブローチ／砕けた魔女のブローチ",
+    "overlap": "戦技付与"
+  },
+  {
+    "id": "vigor_plus_3_witchbrooch",
+    "name": "生命力+3（魔女のブローチ）",
+    "target": "hp",
+    "stackMode": "additiveFlat",
+    "valueUnit": "flat",
+    "valuesByLevel": [60],
+    "allowDeep": false,
+    "stackable": false,
+    "note": "魔女のブローチ／砕けた魔女のブローチ",
+    "overlap": "HP"
+  },
+  {
+    "id": "iron_eye_weakpoint_extend",
+    "name": "【鉄の目】弱点の持続時間を延長させる",
+    "target": "special",
+    "stackMode": "special",
+    "allowDeep": false,
+    "stackable": false,
+    "note": "割れた封蝋",
+    "overlap": "特定強化"
+  },
+  {
+    "id": "iron_eye_counter_boost",
+    "name": "【鉄の目】アーツ発動後、刺突カウンター強化",
+    "target": "atk",
+    "stackMode": "special",
+    "allowDeep": false,
+    "stackable": false,
+    "note": "聖律の刃",
+    "overlap": "特定強化"
+  },
+  {
+    "id": "arts_skill_damage_lady",
+    "name": "【レディ】スキルのダメージ上昇",
+    "target": "atk",
+    "stackMode": "multiplicativePercent",
+    "valueUnit": "%",
+    "valuesByLevel": [20],
+    "allowDeep": false,
+    "stackable": false,
+    "note": "金色の露",
+    "overlap": "特定強化"
+  },
+  {
+    "id": "arts_replay_short_sword",
+    "name": "【レディ】短剣による攻撃連続時、周囲の敵に直近の出来事を再演",
+    "target": "special",
+    "stackMode": "special",
+    "allowDeep": false,
+    "stackable": false,
+    "note": "頭冠のメダル",
+    "overlap": "戦技付与"
+  },
+  {
+    "id": "vigor_plus_3_blessed_coin",
+    "name": "生命力+3（祝福された鉄貨）",
+    "target": "hp",
+    "stackMode": "additiveFlat",
+    "valueUnit": "flat",
+    "valuesByLevel": [60],
+    "allowDeep": false,
+    "stackable": false,
+    "note": "祝福された鉄貨",
+    "overlap": "HP"
+  },
+  {
+    "id": "hidden_power_weaponfinder",
+    "name": "潜在する力から武器種を見つけやすくなる",
+    "target": "special",
+    "stackMode": "special",
+    "allowDeep": true,
+    "stackable": false,
+    "overlap": "その他"
+  },
+  {
+    "id": "arts_buff_family",
+    "name": "【復讐者】ファミリーと共闘中、自身を強化",
+    "target": "atk",
+    "stackMode": "multiplicativePercent",
+    "valueUnit": "%",
+    "valuesByLevel": [20],
+    "allowDeep": false,
+    "stackable": false,
+    "note": "小さな化粧道具",
+    "overlap": "特定強化"
+  },
+  {
+    "id": "arts_aoe_blast_avenger",
+    "name": "【復讐者】アーツ発動時、霊炎の爆発を発生",
+    "target": "atk",
+    "stackMode": "special",
+    "allowDeep": false,
+    "stackable": false,
+    "note": "古びたミニアチュール",
+    "overlap": "戦技付与"
+  },
+  {
+    "id": "arts_magic_field_hermit",
+    "name": "【隠者】属性痕を集めた時、「魔術の地」が発動",
+    "target": "special",
+    "stackMode": "special",
+    "allowDeep": false,
+    "stackable": false,
+    "note": "夜の痕跡",
+    "overlap": "戦技付与"
+  },
+  {
+    "id": "weapon_swap_buff_king",
+    "name": "武器の持ち替え時、いずれかの属性攻撃力を付加（王の夜）",
+    "target": "atk",
+    "stackMode": "special",
+    "allowDeep": false,
+    "stackable": false,
+    "note": "王の夜",
+    "overlap": "属性付与"
+  }
+]

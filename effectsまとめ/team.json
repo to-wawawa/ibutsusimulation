@@ -1,0 +1,46 @@
+[
+  {
+    "id": "item_team_share",
+    "name": "アイテムの効果が周囲の味方にも発動",
+    "target": "special",
+    "stackMode": "special",
+    "allowDeep": true,
+    "stackable": false,
+    "overlap": "特殊"
+  },
+  {
+    "id": "collector_rune_bonus",
+    "name": "自身と味方の取得ルーン増加",
+    "target": "special",
+    "stackMode": "multiplicativePercent",
+    "valueUnit": "%",
+    "valuesByLevel": [5
+    ],
+    "allowDeep": false,
+    "stackable": true,
+    "overlap": "その他"
+  },
+  {
+    "id": "rune_gain_bonus_family",
+    "name": "自身と味方の取得ルーン増加（小さな化粧道具）",
+    "target": "special",
+    "stackMode": "multiplicativePercent",
+    "valueUnit": "%",
+    "valuesByLevel": [5
+    ],
+    "allowDeep": false,
+    "stackable": true,
+    "note": "小さな化粧道具",
+    "overlap": "その他"
+  },
+  {
+    "id": "item_team_share_sea",
+    "name": "アイテムの効果が周囲の味方にも発動（深海の夜）",
+    "target": "special",
+    "stackMode": "special",
+    "allowDeep": false,
+    "stackable": false,
+    "note": "深海の夜",
+    "overlap": "特殊"
+  }
+]

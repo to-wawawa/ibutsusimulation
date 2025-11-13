@@ -1,0 +1,79 @@
+[
+  {
+    "id": "resist_poison_flat",
+    "name": "毒耐性上昇 +0～1",
+    "target": "def",
+    "stackMode": "additiveFlat",
+    "valueUnit": "flat",
+    "valuesByLevel": [75,110],
+    "allowDeep": true,
+    "stackable": true,
+    "overlap": "特殊"
+  },
+  {
+    "id": "resist_rot_flat",
+    "name": "腐敗耐性上昇 +0～1",
+    "target": "def",
+    "stackMode": "additiveFlat",
+    "valueUnit": "flat",
+    "valuesByLevel": [75,110],
+    "allowDeep": true,
+    "stackable": true,
+    "overlap": "特殊"
+  },
+  {
+    "id": "resist_bleed_flat",
+    "name": "出血耐性上昇 +0～1",
+    "target": "def",
+    "stackMode": "additiveFlat",
+    "valueUnit": "flat",
+    "valuesByLevel": [75,110],
+    "allowDeep": true,
+    "stackable": true,
+    "overlap": "特殊"
+  },
+  {
+    "id": "resist_frost_flat",
+    "name": "冷気耐性上昇 +0～1",
+    "target": "def",
+    "stackMode": "additiveFlat",
+    "valueUnit": "flat",
+    "valuesByLevel": [75,110],
+    "allowDeep": true,
+    "stackable": true,
+    "overlap": "特殊"
+  },
+  {
+    "id": "resist_sleep_flat",
+    "name": "睡眠耐性上昇 +0～1",
+    "target": "def",
+    "stackMode": "additiveFlat",
+    "valueUnit": "flat",
+    "valuesByLevel": [75,110],
+    "allowDeep": true,
+    "stackable": true,
+    "overlap": "特殊"
+  },
+  {
+    "id": "resist_madness_flat",
+    "name": "発狂耐性上昇 +0～1",
+    "target": "def",
+    "stackMode": "additiveFlat",
+    "valueUnit": "flat",
+    "valuesByLevel": [75,110],
+    "allowDeep": true,
+    "stackable": true,
+    "overlap": "特殊"
+  },
+  {
+    "id": "resist_death_flat",
+    "name": "抗死耐性上昇 +0～1",
+    "target": "def",
+    "stackMode": "additiveFlat",
+    "valueUnit": "flat",
+    "valuesByLevel": [75,110],
+    "allowDeep": true,
+    "stackable": true,
+    "overlap": "特殊"
+  }
+]

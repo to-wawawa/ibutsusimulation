@@ -1,0 +1,24 @@
+[
+  {
+    "id": "specific_magic_boost",
+    "name": "特定の魔術を強化",
+    "target": "atk",
+    "stackMode": "multiplicativePercent",
+    "valueUnit": "%",
+    "valuesByLevel": [12],
+    "allowDeep": true,
+    "stackable": false,
+    "overlap": "特定強化"
+  },
+  {
+    "id": "specific_incant_boost",
+    "name": "特定の祈祷を強化",
+    "target": "atk",
+    "stackMode": "multiplicativePercent",
+    "valueUnit": "%",
+    "valuesByLevel": [12],
+    "allowDeep": true,
+    "stackable": false,
+    "overlap": "特定強化"
+  }
+]

@@ -1,0 +1,117 @@
+[
+  {
+    "id": "arts_gauge_gain_ability_tracker",
+    "name": "【追跡者】アビリティ発動時、アーツゲージ増加",
+    "target": "special",
+    "stackMode": "special",
+    "allowDeep": false,
+    "stackable": false,
+    "note": "銀の雫",
+    "overlap": "特定強化"
+  },
+  {
+    "id": "arts_gauge_gain_plus3",
+    "name": "アーツゲージ蓄積増加+3（銀の雫）",
+    "target": "special",
+    "stackMode": "additiveFlat",
+    "valueUnit": "flat",
+    "valuesByLevel": [3],
+    "allowDeep": false,
+    "stackable": true,
+    "note": "銀の雫",
+    "overlap": "特殊"
+  },
+  {
+    "id": "arts_skill_cooldown_reduce3",
+    "name": "スキルクールタイム軽減+3（石の杭）",
+    "target": "special",
+    "stackMode": "multiplicativePercent",
+    "valueUnit": "%",
+    "valuesByLevel": [15],
+    "allowDeep": false,
+    "stackable": false,
+    "note": "石の杭",
+    "overlap": "特定強化"
+  },
+  {
+    "id": "arts_gauge_gain_enemy",
+    "name": "敵を倒した時のアーツゲージ蓄積増加 +0～1",
+    "target": "special",
+    "stackMode": "additiveFlat",
+    "valueUnit": "flat",
+    "valuesByLevel": [10,20],
+    "allowDeep": true,
+    "stackable": true,
+    "overlap": "特殊"
+  },
+  {
+    "id": "arts_gauge_gain_critical",
+    "name": "致命の一撃でアーツゲージ蓄積増加 +0～1",
+    "target": "special",
+    "stackMode": "additiveFlat",
+    "valueUnit": "flat",
+    "valuesByLevel": [10,20],
+    "allowDeep": true,
+    "stackable": true,
+    "overlap": "特殊"
+  },
+  {
+    "id": "arts_gauge_guard",
+    "name": "ガード成功時、アーツゲージを蓄積 +0～1",
+    "target": "special",
+    "stackMode": "additiveFlat",
+    "valueUnit": "flat",
+    "valuesByLevel": [10,20],
+    "allowDeep": true,
+    "stackable": true,
+    "overlap": "特殊"
+  },
+  {
+    "id": "arts_gain_on_kill_totem",
+    "name": "敵を倒した時のアーツゲージ蓄積増加（黒爪の首飾り）",
+    "target": "special",
+    "stackMode": "additiveFlat",
+    "valueUnit": "flat",
+    "valuesByLevel": [10],
+    "allowDeep": false,
+    "stackable": false,
+    "note": "黒爪の首飾り",
+    "overlap": "特殊"
+  },
+  {
+    "id": "arts_gain_on_kill_avenger",
+    "name": "敵を倒した時のアーツゲージ蓄積増加（古びたミニアチュール）",
+    "target": "special",
+    "stackMode": "additiveFlat",
+    "valueUnit": "flat",
+    "valuesByLevel": [10],
+    "allowDeep": false,
+    "stackable": false,
+    "note": "古びたミニアチュール",
+    "overlap": "特殊"
+  },
+  {
+    "id": "arts_gain_crit_duke",
+    "name": "致命の一撃でアーツゲージ蓄積増加（爵の夜）",
+    "target": "special",
+    "stackMode": "additiveFlat",
+    "valueUnit": "flat",
+    "valuesByLevel": [10],
+    "allowDeep": false,
+    "stackable": false,
+    "note": "爵の夜",
+    "overlap": "特殊"
+  },
+  {
+    "id": "arts_gain_on_kill_darkhunter",
+    "name": "敵を倒した時のアーツゲージ蓄積増加（狩人の暗き夜）",
+    "target": "special",
+    "stackMode": "additiveFlat",
+    "valueUnit": "flat",
+    "valuesByLevel": [10],
+    "allowDeep": false,
+    "stackable": false,
+    "note": "狩人の暗き夜",
+    "overlap": "特殊"
+  }
+]

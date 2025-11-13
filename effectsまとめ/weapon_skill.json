@@ -1,0 +1,21 @@
+[
+  {
+    "id": "arts_frost_fog",
+    "name": "出撃時の武器の戦技を「冷気の霧」にする",
+    "target": "special",
+    "stackMode": "special",
+    "allowDeep": false,
+    "stackable": false,
+    "overlap": "戦技付与"
+  },
+  {
+    "id": "arts_frost_fog_kasumi",
+    "name": "出撃時の武器の戦技を「冷気の霧」にする（霞の夜）",
+    "target": "special",
+    "stackMode": "special",
+    "allowDeep": false,
+    "stackable": false,
+    "note": "霞の夜",
+    "overlap": "戦技付与"
+  }
+]
