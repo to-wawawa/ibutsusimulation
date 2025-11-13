@@ -33,11 +33,15 @@
 
   <section class="workspace">
     <div class="palette">
-      <h2 class="collapsible" data-target="effect-list">効果ジャンル</h2>
-      <div id="palette-tabs" class="tabs" role="tablist" aria-label="効果ジャンル"></div>
-      <input id="palette-search" type="search" placeholder="検索..." />
-      <div id="effect-list" class="effect-list collapsible-target"></div>
+      <h2 class="collapsible" data-target="palette-body">効果ジャンル</h2>
+
+      <div id="palette-body" class="collapsible-target">
+        <div id="palette-tabs" class="tabs" role="tablist" aria-label="効果ジャンル"></div>
+        <input id="palette-search" type="search" placeholder="検索..." />
+        <div id="effect-list" class="effect-list"></div>
+      </div>
     </div>
+
 
     <div class="slots">
       <h2 class="collapsible" data-target="slot-grid">スロット（18）</h2>
