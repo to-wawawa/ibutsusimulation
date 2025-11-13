@@ -39,12 +39,23 @@ button {
 }
 button:hover { border-color: var(--accent); }
 
-.workspace {
-  display: grid;
-  grid-template-columns: 350px 2fr;
-  gap: 16px;
-  align-items: start;
+/* PC のときだけ左 350px + 右 2fr のレイアウト */
+@media (min-width: 701px) {
+  .workspace {
+    display: grid;
+    grid-template-columns: 350px 2fr;
+    gap: 16px;
+    align-items: start;
+  }
 }
+
+/* スマホは 1 カラムにする（既存を強化） */
+@media (max-width: 700px) {
+  .workspace {
+    grid-template-columns: 1fr !important; 
+  }
+}
+
 .palette, .slots, .inputs, .output {
   background: var(--panel);
   border: 1px solid var(--border);
@@ -279,7 +290,7 @@ button:hover { border-color: var(--accent); }
 
   /* スロットの高さ（aspect-ratio）を少し高めてタップしやすく */
   .slot {
-    aspect-ratio: 9 / 7;
+    aspect-ratio: 5 / 2;
   }
 
   /* 検索欄の高さ・余白も広げる */
