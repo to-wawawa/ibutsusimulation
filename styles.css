@@ -41,7 +41,7 @@ button:hover { border-color: var(--accent); }
 
 .workspace {
   display: grid;
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: 350px 2fr;
   gap: 16px;
   align-items: start;
 }
@@ -320,4 +320,54 @@ button:hover { border-color: var(--accent); }
 }
 #conflict-popup.visible {
   opacity: 1;
+}
+/* ▼ アイコン（スマホ時のみ表示） */
+@media (max-width: 700px) {
+  h2.collapsible {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+  }
+
+  h2.collapsible::after {
+    content: "▼";
+    font-size: 14px;
+    margin-left: 8px;
+    transition: transform 0.25s ease;
+  }
+
+  /* 閉じているときは矢印が回転 */
+  h2.collapsible.collapsed::after {
+    transform: rotate(-90deg);
+  }
+
+  /* ターゲットが折りたたまれているとき */
+  .collapsible-target.collapsed {
+    display: none !important;
+  }
+}
+/* PC表示（横幅 701px 以上）で効果ジャンル枠を左側に追従させる */
+@media (min-width: 701px) {
+  .palette {
+    position: sticky;
+    top: 20px;           /* 上から固定する距離 */
+    align-self: flex-start; /* グリッドが高さを合わせてこないように */
+  }
+
+  /* 内部スクロールを正常動作させるための設定 */
+  #palette-body {
+    display: flex;
+    flex-direction: column;
+    max-height: calc(100vh - 40px); /* 画面いっぱいから余白 */
+    min-height: 0;
+  }
+
+  /* 効果リストを可変伸縮にする */
+  .effect-list {
+    flex: 1;
+    overflow-y: auto;
+    max-height: none;
+  }
 }
