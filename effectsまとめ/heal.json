@@ -2,7 +2,7 @@
   {
     "id": "hp_regen_passive",
     "name": "HP持続回復",
-    "target": "hp",
+    "target": "heal",
     "stackMode": "additiveFlat",
     "valueUnit": "flat",
     "valuesByLevel": [10],
@@ -13,7 +13,7 @@
   {
     "id": "hp_flask_boost",
     "name": "聖杯瓶の回復量上昇",
-    "target": "hp",
+    "target": "heal",
     "stackMode": "multiplicativePercent",
     "valueUnit": "%",
     "valuesByLevel": [10],
@@ -24,7 +24,7 @@
   {
     "id": "hp_low_aoe_regen",
     "name": "HP低下時、周囲の味方を含めHPをゆっくりと回復",
-    "target": "hp",
+    "target": "heal",
     "stackMode": "additiveFlat",
     "valueUnit": "flat",
     "valuesByLevel": [20],
@@ -35,7 +35,7 @@
   {
     "id": "hp_guard_heal",
     "name": "ガード成功時、HPを回復",
-    "target": "hp",
+    "target": "heal",
     "stackMode": "additiveFlat",
     "valueUnit": "flat",
     "valuesByLevel": [15],
@@ -46,7 +46,7 @@
   {
     "id": "hp_hit_recovery",
     "name": "ダメージを受けた直後、攻撃によりHPの一部を回復 +0～2",
-    "target": "hp",
+    "target": "heal",
     "stackMode": "multiplicativePercent",
     "valueUnit": "%",
     "valuesByLevel": [0,25,35],
@@ -111,7 +111,7 @@
   {
     "id": "atk_hp_recover_halberd",
     "name": "斧槍の攻撃でHP回復（三冊目の本）",
-    "target": "hp",
+    "target": "heal",
     "stackMode": "additiveFlat",
     "valueUnit": "flat",
     "valuesByLevel": [15],
@@ -123,7 +123,7 @@
   {
     "id": "arts_team_heal_guardian",
     "name": "【守護者】アーツ発動時、周囲の味方のHPを徐々に回復",
-    "target": "hp",
+    "target": "heal",
     "stackMode": "additiveFlat",
     "valueUnit": "flat",
     "valuesByLevel": [20],
@@ -135,7 +135,7 @@
   {
     "id": "hp_regen_blessed_coin",
     "name": "HP持続回復（祝福された鉄貨）",
-    "target": "hp",
+    "target": "heal",
     "stackMode": "additiveFlat",
     "valueUnit": "flat",
     "valuesByLevel": [15],
@@ -147,7 +147,7 @@
   {
     "id": "arts_gauge_gain_totem",
     "name": "トーテム・ステラの周囲で敵を倒した時、HP回復",
-    "target": "hp",
+    "target": "heal",
     "stackMode": "additiveFlat",
     "valueUnit": "flat",
     "valuesByLevel": [50],
@@ -158,7 +158,7 @@
   {
     "id": "atk_hp_recover_weapon",
     "name": "斧槍の攻撃でHP回復",
-    "target": "hp",
+    "target": "heal",
     "stackMode": "additiveFlat",
     "valueUnit": "flat",
     "valuesByLevel": [15],
@@ -169,7 +169,7 @@
   {
     "id": "hp_regen_blessed_coin",
     "name": "HP持続回復（祝福された鉄貨）",
-    "target": "hp",
+    "target": "heal",
     "stackMode": "additiveFlat",
     "valueUnit": "flat",
     "valuesByLevel": [15],
@@ -191,7 +191,7 @@
   {
     "id": "arts_heal_totem",
     "name": "トーテム・ステラの周囲で敵を倒した時、HP回復",
-    "target": "hp",
+    "target": "heal",
     "stackMode": "additiveFlat",
     "valueUnit": "flat",
     "valuesByLevel": [50],
@@ -203,7 +203,7 @@
   {
     "id": "arts_team_heal_avenger",
     "name": "【復讐者】アーツ発動時、自身のHPと引き換えに味方全回復",
-    "target": "hp",
+    "target": "heal",
     "stackMode": "special",
     "allowDeep": false,
     "stackable": false,
@@ -213,7 +213,7 @@
   {
     "id": "arts_youtou_heal_executer",
     "name": "【執行者】スキル中、妖刀が解放状態になるとHP回復",
-    "target": "hp",
+    "target": "heal",
     "stackMode": "additiveFlat",
     "valueUnit": "flat",
     "valuesByLevel": [20],
@@ -225,7 +225,7 @@
   {
     "id": "arts_roar_heal_executer",
     "name": "【執行者】アーツ発動中、咆哮でHP回復",
-    "target": "hp",
+    "target": "heal",
     "stackMode": "additiveFlat",
     "valueUnit": "flat",
     "valuesByLevel": [30],
@@ -237,7 +237,7 @@
   {
     "id": "hp_regen_on_low_ally_bless",
     "name": "HP低下時、周囲の味方を含めHPをゆっくり回復（黄金の萌芽）",
-    "target": "hp",
+    "target": "heal",
     "stackMode": "additiveFlat",
     "valueUnit": "flat",
     "valuesByLevel": [20],
@@ -249,7 +249,7 @@
   {
     "id": "hp_guard_heal_bless",
     "name": "ガード成功時、HP回復（黄金の萌芽）",
-    "target": "hp",
+    "target": "heal",
     "stackMode": "additiveFlat",
     "valueUnit": "flat",
     "valuesByLevel": [15],
@@ -307,7 +307,7 @@
   {
     "id": "crit_stab_heal_hunter",
     "name": "刺突カウンター発生時、HP回復（狩人の夜）",
-    "target": "hp",
+    "target": "heal",
     "stackMode": "additiveFlat",
     "valueUnit": "flat",
     "valuesByLevel": [15],
@@ -343,7 +343,7 @@
   {
     "id": "hp_regen_darksea",
     "name": "HP持続回復（深海の暗き夜）",
-    "target": "hp",
+    "target": "heal",
     "stackMode": "additiveFlat",
     "valueUnit": "flat",
     "valuesByLevel": [15],
@@ -355,7 +355,7 @@
   {
     "id": "hp_team_regen_darksea",
     "name": "HP低下時、周囲の味方を含めHPをゆっくりと回復（深海の暗き夜）",
-    "target": "hp",
+    "target": "heal",
     "stackMode": "additiveFlat",
     "valueUnit": "flat",
     "valuesByLevel": [20],
