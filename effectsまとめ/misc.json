@@ -2,7 +2,7 @@
   {
     "id": "vigor_plus_1_3",
     "name": "生命力+1～3",
-    "target": "hp",
+    "target": "states",
     "stackMode": "additiveFlat",
     "valueUnit": "flat",
     "valuesByLevel": [20,40,60],
@@ -13,7 +13,7 @@
   {
     "id": "mind_plus_1_3",
     "name": "精神力+1～3",
-    "target": "fp",
+    "target": "states",
     "stackMode": "additiveFlat",
     "valueUnit": "flat",
     "valuesByLevel": [0,5,10,15],
@@ -140,7 +140,7 @@
   {
     "id": "vigor_plus_3_witchbrooch",
     "name": "生命力+3（魔女のブローチ）",
-    "target": "hp",
+    "target": "states",
     "stackMode": "additiveFlat",
     "valueUnit": "flat",
     "valuesByLevel": [60],
@@ -194,7 +194,7 @@
   {
     "id": "vigor_plus_3_blessed_coin",
     "name": "生命力+3（祝福された鉄貨）",
-    "target": "hp",
+    "target": "states",
     "stackMode": "additiveFlat",
     "valueUnit": "flat",
     "valuesByLevel": [60],
