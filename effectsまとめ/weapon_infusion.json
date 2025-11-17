@@ -11,7 +11,7 @@
   {
     "id": "weapon_fire_infusion",
     "name": "出撃時の武器に炎攻撃力を付加",
-    "target": "atk",
+    "target": "special",
     "stackMode": "special",
     "allowDeep": false,
     "stackable": false,
@@ -20,7 +20,7 @@
   {
     "id": "weapon_holy_infusion",
     "name": "出撃時の武器に聖攻撃力を付加",
-    "target": "atk",
+    "target": "special",
     "stackMode": "special",
     "allowDeep": false,
     "stackable": false,
@@ -29,7 +29,7 @@
   {
     "id": "weapon_frost_infusion",
     "name": "出撃時の武器に冷気の状態異常を付加",
-    "target": "atk",
+    "target": "special",
     "stackMode": "special",
     "allowDeep": false,
     "stackable": false,
@@ -38,7 +38,7 @@
   {
     "id": "weapon_holy_infusion_sanctblade",
     "name": "出撃時の武器に聖攻撃力を付加（聖律の刃）",
-    "target": "atk",
+    "target": "special",
     "stackMode": "special",
     "allowDeep": false,
     "stackable": false,
@@ -48,7 +48,7 @@
   {
     "id": "weapon_fire_infusion_beast",
     "name": "出撃時の武器に炎攻撃力を付加（獣の夜）",
-    "target": "atk",
+    "target": "special",
     "stackMode": "special",
     "allowDeep": false,
     "stackable": false,
@@ -58,7 +58,7 @@
   {
     "id": "weapon_poison_infusion_scholar",
     "name": "出撃時の武器に毒の状態異常を付加（識の夜）",
-    "target": "atk",
+    "target": "special",
     "stackMode": "special",
     "allowDeep": false,
     "stackable": false,
@@ -68,7 +68,7 @@
   {
     "id": "weapon_cold_infusion_darkkasumi",
     "name": "出撃時の武器に冷気の状態異常を付加（霞の暗き夜）",
-    "target": "atk",
+    "target": "special",
     "stackMode": "special",
     "allowDeep": false,
     "stackable": false,

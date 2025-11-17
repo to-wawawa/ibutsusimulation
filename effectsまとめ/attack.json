@@ -77,6 +77,28 @@
     "overlap": "攻撃力"
   },
   {
+    "id": "magic_boost_pct",
+    "name": "魔術強化 +0～2",
+    "target": "atk",
+    "stackMode": "multiplicativePercent",
+    "valueUnit": "%",
+    "valuesByLevel": [4,8,10],
+    "allowDeep": true,
+    "stackable": true,
+    "overlap": "攻撃力"
+  },
+  {
+    "id": "incant_boost_pct",
+    "name": "祈祷強化 +0～2",
+    "target": "atk",
+    "stackMode": "multiplicativePercent",
+    "valueUnit": "%",
+    "valuesByLevel": [4,8,10],
+    "allowDeep": true,
+    "stackable": true,
+    "overlap": "攻撃力"
+  },
+  {
     "id": "atk_critical_boost",
     "name": "致命の一撃強化",
     "target": "atk",

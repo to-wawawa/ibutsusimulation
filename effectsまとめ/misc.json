@@ -24,7 +24,7 @@
   {
     "id": "endurance_plus_1_3",
     "name": "持久力+1～3",
-    "target": "stamina",
+    "target": "states",
     "stackMode": "additiveFlat",
     "valueUnit": "flat",
     "valuesByLevel": [0,2,4,6],
@@ -33,31 +33,9 @@
     "overlap": "スタミナ"
   },
   {
-    "id": "magic_boost_pct",
-    "name": "魔術強化 +0～2",
-    "target": "atk",
-    "stackMode": "multiplicativePercent",
-    "valueUnit": "%",
-    "valuesByLevel": [4,8,10],
-    "allowDeep": true,
-    "stackable": true,
-    "overlap": "攻撃力"
-  },
-  {
-    "id": "incant_boost_pct",
-    "name": "祈祷強化 +0～2",
-    "target": "atk",
-    "stackMode": "multiplicativePercent",
-    "valueUnit": "%",
-    "valuesByLevel": [4,8,10],
-    "allowDeep": true,
-    "stackable": true,
-    "overlap": "攻撃力"
-  },
-  {
     "id": "atk_arts_buff_avenger",
     "name": "【復讐者】アーツ発動時 味方強化（30秒）",
-    "target": "atk",
+    "target": "arts",
     "stackMode": "multiplicativePercent",
     "valueUnit": "%",
     "valuesByLevel": [25],
@@ -68,7 +46,7 @@
   {
     "id": "atk_arts_buff_lady",
     "name": "【レディ】スキルのダメージ上昇",
-    "target": "atk",
+    "target": "arts",
     "stackMode": "multiplicativePercent",
     "valueUnit": "%",
     "valuesByLevel": [20],
@@ -79,7 +57,7 @@
   {
     "id": "arts_fire_followup",
     "name": "【追跡者】スキル使用時、通常攻撃で炎を纏った追撃を行う（大剣のみ）",
-    "target": "atk",
+    "target": "special",
     "stackMode": "special",
     "valueUnit": "flat",
     "allowDeep": false,
@@ -90,7 +68,7 @@
   {
     "id": "arts_flame_burst_tracker",
     "name": "【追跡者】アーツ発動時、周囲を延焼",
-    "target": "atk",
+    "target": "arts",
     "stackMode": "special",
     "allowDeep": false,
     "stackable": false,
@@ -100,7 +78,7 @@
   {
     "id": "arts_skill_count_plus1",
     "name": "【追跡者】スキルの使用回数+1",
-    "target": "special",
+    "target": "arts",
     "stackMode": "special",
     "allowDeep": false,
     "stackable": false,
@@ -110,7 +88,7 @@
   {
     "id": "arts_skill_extend_guardian",
     "name": "【守護者】スキルの持続時間延長",
-    "target": "special",
+    "target": "arts",
     "stackMode": "special",
     "allowDeep": false,
     "stackable": false,
@@ -120,7 +98,7 @@
   {
     "id": "arts_whirlwind_guardian",
     "name": "【守護者】斧槍タメ攻撃時、つむじ風が発生",
-    "target": "atk",
+    "target": "special",
     "stackMode": "special",
     "allowDeep": false,
     "stackable": false,
@@ -152,7 +130,7 @@
   {
     "id": "iron_eye_weakpoint_extend",
     "name": "【鉄の目】弱点の持続時間を延長させる",
-    "target": "special",
+    "target": "arts",
     "stackMode": "special",
     "allowDeep": false,
     "stackable": false,
@@ -162,7 +140,7 @@
   {
     "id": "iron_eye_counter_boost",
     "name": "【鉄の目】アーツ発動後、刺突カウンター強化",
-    "target": "atk",
+    "target": "arts",
     "stackMode": "special",
     "allowDeep": false,
     "stackable": false,
@@ -227,7 +205,7 @@
   {
     "id": "arts_aoe_blast_avenger",
     "name": "【復讐者】アーツ発動時、霊炎の爆発を発生",
-    "target": "atk",
+    "target": "arts",
     "stackMode": "special",
     "allowDeep": false,
     "stackable": false,
@@ -237,7 +215,7 @@
   {
     "id": "arts_magic_field_hermit",
     "name": "【隠者】属性痕を集めた時、「魔術の地」が発動",
-    "target": "special",
+    "target": "arts",
     "stackMode": "special",
     "allowDeep": false,
     "stackable": false,
@@ -247,7 +225,7 @@
   {
     "id": "weapon_swap_buff_king",
     "name": "武器の持ち替え時、いずれかの属性攻撃力を付加（王の夜）",
-    "target": "atk",
+    "target": "special",
     "stackMode": "special",
     "allowDeep": false,
     "stackable": false,

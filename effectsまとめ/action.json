@@ -2,7 +2,7 @@
   {
     "id": "atk_poison_pct",
     "name": "毒状態の敵に対する攻撃を強化 +0～2",
-    "target": "action",
+    "target": "atk",
     "stackMode": "multiplicativePercent",
     "valueUnit": "%",
     "valuesByLevel": [10,16,20],
@@ -13,7 +13,7 @@
   {
     "id": "atk_rot_pct",
     "name": "腐敗状態の敵に対する攻撃を強化 +0～2",
-    "target": "action",
+    "target": "atk",
     "stackMode": "multiplicativePercent",
     "valueUnit": "%",
     "valuesByLevel": [10,16,20],
@@ -24,7 +24,7 @@
   {
     "id": "atk_frost_pct",
     "name": "凍傷状態の敵に対する攻撃を強化 +0～2",
-    "target": "action",
+    "target": "atk",
     "stackMode": "multiplicativePercent",
     "valueUnit": "%",
     "valuesByLevel": [10,16,20],
@@ -35,7 +35,7 @@
   {
     "id": "crit_gain_rune_ironeye",
     "name": "致命の一撃でルーンを取得（割れた封蝋）",
-    "target": "action",
+    "target": "special",
     "stackMode": "additiveFlat",
     "valueUnit": "flat",
     "valuesByLevel": [1],
@@ -47,8 +47,8 @@
   {
     "id": "gesture_madness_build",
     "name": "ジェスチャー「あぐら」により発狂が蓄積",
-    "target": "action",
-    "stackMode": "action",
+    "target": "special",
+    "stackMode": "special",
     "allowDeep": true,
     "stackable": false,
     "overlap": "その他"
@@ -56,8 +56,8 @@
   {
     "id": "frost_hide_on_trigger",
     "name": "周囲で凍傷状態の発生時、自身の姿を隠す",
-    "target": "action",
-    "stackMode": "action",
+    "target": "special",
+    "stackMode": "special",
     "allowDeep": false,
     "stackable": false,
     "overlap": "状態異常付与"
@@ -65,7 +65,7 @@
   {
     "id": "atk_gain_rune",
     "name": "致命の一撃でルーンを取得",
-    "target": "action",
+    "target": "special",
     "stackMode": "additiveFlat",
     "valueUnit": "flat",
     "valuesByLevel": [1],
@@ -76,8 +76,8 @@
   {
     "id": "gesture_madness_demon",
     "name": "ジェスチャー「あぐら」により発狂が蓄積（魔の夜）",
-    "target": "action",
-    "stackMode": "action",
+    "target": "special",
+    "stackMode": "special",
     "allowDeep": false,
     "stackable": false,
     "note": "魔の夜",
@@ -86,8 +86,8 @@
   {
     "id": "frost_hide_kasumi",
     "name": "周囲で凍傷状態の発生時、自身の姿を隠す（霞の夜）",
-    "target": "action",
-    "stackMode": "action",
+    "target": "special",
+    "stackMode": "special",
     "allowDeep": false,
     "stackable": false,
     "note": "霞の夜",
@@ -96,7 +96,7 @@
   {
     "id": "atk_frost_boost_kasumi",
     "name": "凍傷状態の敵に対する攻撃を強化（霞の夜）",
-    "target": "action",
+    "target": "atk",
     "stackMode": "multiplicativePercent",
     "valueUnit": "%",
     "valuesByLevel": [10],
@@ -108,7 +108,7 @@
   {
     "id": "crit_rune_gain_darkduke",
     "name": "致命の一撃でルーンを取得（爵の暗き夜）",
-    "target": "action",
+    "target": "special",
     "stackMode": "additiveFlat",
     "valueUnit": "flat",
     "valuesByLevel": [50],
@@ -120,8 +120,8 @@
   {
     "id": "gesture_madness_darkdemon",
     "name": "ジェスチャー「あぐら」により発狂が蓄積（魔の暗き夜）",
-    "target": "action",
-    "stackMode": "action",
+    "target": "special",
+    "stackMode": "special",
     "allowDeep": false,
     "stackable": false,
     "note": "魔の暗き夜",
@@ -130,8 +130,8 @@
   {
     "id": "frost_hide_darkkasumi",
     "name": "周囲で凍傷状態の発生時、自身の姿を隠す（霞の暗き夜）",
-    "target": "action",
-    "stackMode": "action",
+    "target": "special",
+    "stackMode": "special",
     "allowDeep": false,
     "stackable": false,
     "note": "霞の暗き夜",

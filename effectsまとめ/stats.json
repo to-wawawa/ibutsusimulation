@@ -2,7 +2,7 @@
   {
     "id": "deep_max_hp_pct",
     "name": "【深夜】最大HP上昇",
-    "target": "hp",
+    "target": "states",
     "stackMode": "multiplicativePercent",
     "valueUnit": "%",
     "valuesByLevel": [10],
@@ -14,7 +14,7 @@
   {
     "id": "deep_max_fp_pct",
     "name": "【深夜】最大FP上昇",
-    "target": "fp",
+    "target": "states",
     "stackMode": "multiplicativePercent",
     "valueUnit": "%",
     "valuesByLevel": [15],
@@ -26,7 +26,7 @@
   {
     "id": "deep_max_stamina_pct",
     "name": "【深夜】最大スタミナ上昇",
-    "target": "stamina",
+    "target": "states",
     "stackMode": "multiplicativePercent",
     "valueUnit": "%",
     "valuesByLevel": [12],
@@ -38,7 +38,7 @@
   {
     "id": "max_hp_flat",
     "name": "最大HP上昇",
-    "target": "hp",
+    "target": "states",
     "stackMode": "additiveFlat",
     "valueUnit": "flat",
     "default": 100,
@@ -49,7 +49,7 @@
   {
     "id": "max_fp_flat",
     "name": "最大FP上昇",
-    "target": "fp",
+    "target": "states",
     "stackMode": "additiveFlat",
     "valueUnit": "flat",
     "default": 25,
@@ -60,7 +60,7 @@
   {
     "id": "max_stamina_flat",
     "name": "最大スタミナ上昇",
-    "target": "stamina",
+    "target": "states",
     "stackMode": "additiveFlat",
     "valueUnit": "flat",
     "default": 10,
@@ -71,7 +71,7 @@
   {
     "id": "strength_plus_1_3",
     "name": "筋力+1～3",
-    "target": "atk",
+    "target": "states",
     "stackMode": "additiveFlat",
     "valueUnit": "flat",
     "valuesByLevel": [0,2,4,6],
@@ -82,7 +82,7 @@
   {
     "id": "dex_plus_1_3",
     "name": "技量+1～3",
-    "target": "atk",
+    "target": "states",
     "stackMode": "additiveFlat",
     "valueUnit": "flat",
     "valuesByLevel": [0,2,4,6],
@@ -93,7 +93,7 @@
   {
     "id": "int_plus_1_3",
     "name": "知力+1～3",
-    "target": "atk",
+    "target": "states",
     "stackMode": "additiveFlat",
     "valueUnit": "flat",
     "valuesByLevel": [0,2,4,6],
@@ -104,7 +104,7 @@
   {
     "id": "faith_plus_1_3",
     "name": "信仰+1～3",
-    "target": "atk",
+    "target": "states",
     "stackMode": "additiveFlat",
     "valueUnit": "flat",
     "valuesByLevel": [0,2,4,6],
@@ -115,7 +115,7 @@
   {
     "id": "arcane_plus_1_3",
     "name": "神秘+1～3",
-    "target": "atk",
+    "target": "states",
     "stackMode": "additiveFlat",
     "valueUnit": "flat",
     "valuesByLevel": [0,2,4,6],
@@ -126,7 +126,7 @@
   {
     "id": "poise_plus_1_3",
     "name": "強靭度+1～3",
-    "target": "def",
+    "target": "states",
     "stackMode": "additiveFlat",
     "valueUnit": "flat",
     "valuesByLevel": [0,2,4,6],
@@ -137,7 +137,7 @@
   {
     "id": "tower_fp_boost",
     "name": "魔術師塔の仕掛けが解除される度、最大FP上昇",
-    "target": "fp",
+    "target": "states",
     "stackMode": "multiplicativePercent",
     "valueUnit": "%",
     "valuesByLevel": [18],
@@ -148,7 +148,7 @@
   {
     "id": "church_hp_boost",
     "name": "大教会の強敵を倒す度、最大HP上昇",
-    "target": "hp",
+    "target": "states",
     "stackMode": "multiplicativePercent",
     "valueUnit": "%",
     "valuesByLevel": [5],
@@ -159,7 +159,7 @@
   {
     "id": "camp_stamina_boost",
     "name": "大野営地の強敵を倒す度、最大スタミナ上昇",
-    "target": "stamina",
+    "target": "states",
     "stackMode": "multiplicativePercent",
     "valueUnit": "%",
     "valuesByLevel": [7.5],
@@ -170,7 +170,7 @@
   {
     "id": "ruin_arcane_boost",
     "name": "遺跡の強敵を倒す度、神秘上昇",
-    "target": "atk",
+    "target": "states",
     "stackMode": "multiplicativePercent",
     "valueUnit": "%",
     "valuesByLevel": [4],
@@ -181,7 +181,7 @@
   {
     "id": "impact_resist_boost",
     "name": "ダメージで吹き飛ばされた時、強靭度とカット率上昇",
-    "target": "def",
+    "target": "states",
     "stackMode": "multiplicativePercent",
     "valueUnit": "%",
     "valuesByLevel": [10],
@@ -192,7 +192,7 @@
   {
     "id": "arcane_plus_3_silverdrop",
     "name": "神秘+3（銀の雫）",
-    "target": "atk",
+    "target": "states",
     "stackMode": "additiveFlat",
     "valueUnit": "flat",
     "valuesByLevel": [3],
@@ -204,7 +204,7 @@
   {
     "id": "collector_drop_bonus",
     "name": "小砦の強敵を倒す度、取得ルーン増加・発見力上昇",
-    "target": "special",
+    "target": "states",
     "stackMode": "multiplicativePercent",
     "valueUnit": "%",
     "valuesByLevel": [5.5],
@@ -215,7 +215,7 @@
   {
     "id": "arts_buff_brawler",
     "name": "【無頼漢】スキル中に攻撃を受けると攻撃力と最大スタミナ上昇",
-    "target": "atk",
+    "target": "states",
     "stackMode": "special",
     "allowDeep": false,
     "stackable": false,
@@ -225,7 +225,7 @@
   {
     "id": "strength_plus_3_brawler",
     "name": "筋力+3（ちぎれた組み紐）",
-    "target": "atk",
+    "target": "states",
     "stackMode": "additiveFlat",
     "valueUnit": "flat",
     "valuesByLevel": [3],
@@ -237,7 +237,7 @@
   {
     "id": "poise_plus_3_totem",
     "name": "強靭度+3（黒爪の首飾り）",
-    "target": "def",
+    "target": "states",
     "stackMode": "additiveFlat",
     "valueUnit": "flat",
     "valuesByLevel": [6],
@@ -249,7 +249,7 @@
   {
     "id": "arts_hp_buff_hermit",
     "name": "【隠者】アーツ発動時、最大HP上昇",
-    "target": "hp",
+    "target": "states",
     "stackMode": "multiplicativePercent",
     "valueUnit": "%",
     "valuesByLevel": [50],
@@ -261,7 +261,7 @@
   {
     "id": "int_plus_3_bone",
     "name": "知力+3（骨のような石）",
-    "target": "atk",
+    "target": "states",
     "stackMode": "additiveFlat",
     "valueUnit": "flat",
     "valuesByLevel": [3],
@@ -273,7 +273,7 @@
   {
     "id": "dex_plus_3_executer",
     "name": "技量+3（祝福された花）",
-    "target": "atk",
+    "target": "states",
     "stackMode": "additiveFlat",
     "valueUnit": "flat",
     "valuesByLevel": [3],
@@ -285,7 +285,7 @@
   {
     "id": "fp_max_boost_scholar",
     "name": "最大FP上昇（識の夜）",
-    "target": "fp",
+    "target": "states",
     "stackMode": "additiveFlat",
     "valueUnit": "flat",
     "valuesByLevel": [25],
@@ -297,7 +297,7 @@
   {
     "id": "hp_max_boost_sea",
     "name": "最大HP上昇（深海の夜）",
-    "target": "hp",
+    "target": "states",
     "stackMode": "additiveFlat",
     "valueUnit": "flat",
     "valuesByLevel": [100],
@@ -309,7 +309,7 @@
   {
     "id": "stamina_max_boost_hunter",
     "name": "最大スタミナ上昇（狩人の夜）",
-    "target": "stamina",
+    "target": "states",
     "stackMode": "additiveFlat",
     "valueUnit": "flat",
     "valuesByLevel": [10],
@@ -321,7 +321,7 @@
   {
     "id": "fp_max_up_darkscholar",
     "name": "最大FP上昇（識の暗き夜）",
-    "target": "fp",
+    "target": "states",
     "stackMode": "additiveFlat",
     "valueUnit": "flat",
     "valuesByLevel": [25],
@@ -333,7 +333,7 @@
   {
     "id": "fp_permanent_up_tower_darkscholar",
     "name": "魔術師塔の仕掛けが解除される度、永続で最大FP上昇（識の暗き夜）",
-    "target": "fp",
+    "target": "states",
     "stackMode": "multiplicativePercent",
     "valueUnit": "%",
     "valuesByLevel": [18],
@@ -345,7 +345,7 @@
   {
     "id": "hp_max_up_darksea",
     "name": "最大HP上昇（深海の暗き夜）",
-    "target": "hp",
+    "target": "states",
     "stackMode": "additiveFlat",
     "valueUnit": "flat",
     "valuesByLevel": [100],
@@ -357,7 +357,7 @@
   {
     "id": "stamina_max_up_darkhunter",
     "name": "最大スタミナ上昇（狩人の暗き夜）",
-    "target": "stamina",
+    "target": "states",
     "stackMode": "additiveFlat",
     "valueUnit": "flat",
     "valuesByLevel": [10],

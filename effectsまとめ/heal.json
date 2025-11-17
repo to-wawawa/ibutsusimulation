@@ -57,7 +57,7 @@
   {
     "id": "atk_fp_recover",
     "name": "攻撃命中時、FP回復",
-    "target": "fp",
+    "target": "heal",
     "stackMode": "additiveFlat",
     "valueUnit": "flat",
     "valuesByLevel": [3],

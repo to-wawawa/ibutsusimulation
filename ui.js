@@ -11,8 +11,9 @@
     // ===========================
     // タブ構成に固有遺物を追加
     // ===========================
-    const TAB_ORDER = ["atk", "hp", "fp", "stamina", "def", "special", "other", "unique"];
+    const TAB_ORDER = ["states","atk", "hp", "fp", "stamina", "def", "special", "other", "unique"];
     const TAB_LABELS = {
+      states: "能力値",
       atk: "攻撃",
       hp: "HP",
       fp: "FP",

@@ -5,7 +5,7 @@ window.addEventListener("DOMContentLoaded", async () => {
   try {
     // 各カテゴリごとのJSONファイル（miscも含む）
     const categories = [
-      "stats",
+      "states",
       "attack",
       "arts",
       "magic",
